@@ -2,6 +2,7 @@
   --black-dark: #000000;
   --black-medium: #0a0a0a;
   --black-light: #131618;
+  --black-extralight: #181c1f;
 
   --gray-dark: #383838;
   --gray-light: #a1a1a1;
@@ -9,23 +10,30 @@
   --white-dark: #e5e5e5;
   --white-light: #ffffff;
 
-  --blue-dark: #1447e6;
-  --blue-light: #436ceb;
+  --blue-dark: #1f5c99;
+  --blue-medium: #007fff;
+  --blue-light: #3399ff;
 
-  --blue-dark-blend-black-dark: #040e2e;
-  --blue-dark-blend-black-medium: #0c1636;
-  --blue-dark-blend-black-light: #132041;
+  --blue-medium-blend-black-dark: #001933;
+  --blue-medium-blend-black-medium: #08213b;
+  --blue-medium-blend-black-light: #0f2b46;
+  --blue-medium-blend-black-extralight: #13304c;
 
-  --blue-dark-blend-gray-dark: #313b5b;
-  --blue-dark-blend-gray-light: #858faf;
+  --blue-medium-blend-gray-dark: #2d4660;
+  --blue-medium-blend-gray-light: #819ab4;
 
-  --blue-dark-blend-white-dark: #bbc5e5;
-  --blue-dark-blend-white-light: #d0dafa;
+  --blue-medium-blend-white-dark: #b7d1ea;
+  --blue-medium-blend-white-light: #cce5ff;
 
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: monospace;
+
+  --spacing-small: 6px;
+  --spacing-medium: 8px;
+  --spacing-large: 10px;
 }
 
+/* Mode specific settings */
 @media (prefers-color-scheme: light) {
   body {
     background: var(--white-dark);
@@ -38,19 +46,82 @@
     background: var(--black-medium);
     color: var(--white-dark);
   }
+
+  a:link {
+    color: var(--blue-light);
+  }
+
+  a:visited {
+    color: var(--blue-dark);
+  }
+
+  a:hover {
+    text-decoration-style: solid;
+  }
+
+  pre {
+    background: var(--black-light);
+  }
+
+  .c-button {
+    border: 1px solid var(--gray-dark);
+    background-color: var(--black-light);
+    color: var(--white-dark);
+  }
+
+  .c-button:hover {
+    border: 1px solid var(--blue-medium-blend-gray-dark);
+    background-color: var(--blue-medium-blend-black-light);
+    color: var(--white-light);
+  }
+
+  .c-card {
+    background: var(--black-extralight);
+  }
 }
 
+/* Basic elements */
 html {
   font-family: var(--font-family-sans-serif);
   line-height: 1.15;
   font-size: 14;
 }
 
-.c-button {
-  background-color: var(--blue-dark);
-  color: var(--white-dark);
+p {
+  margin: 0px;
+
+  &:not(:last-child)  {
+    margin-bottom: var(--spacing-small);
+  }
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+pre {
+  overflow: scroll;
+  max-height: 500px;
+  padding: var(--spacing-large);
   border: none;
-  padding: 8px 8px;
+
+  margin: 0px;
+  &:not(:last-child)  {
+    margin-bottom: var(--spacing-medium);
+  }
+}
+
+/* Content */
+.c-content-area {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Components */
+.c-button {
+  padding: var(--spacing-small);
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -58,7 +129,25 @@ html {
   min-width: 150px;
 }
 
-.c-button:hover {
+.c-e-button-main {
+  border: 1px solid var(--blue-medium);
+  background-color: var(--blue-medium);
+  color: var(--white-light);
+}
+
+.c-e-button-main:hover {
+  border: 1px solid var(--blue-light);
   background-color: var(--blue-light);
   color: var(--white-light);
+}
+
+.c-card {
+  padding: var(--spacing-large);
+  min-width: 300px;
+  border: none;
+
+  margin: 0px;
+  &:not(:last-child)  {
+    margin-bottom: var(--spacing-medium);
+  }
 }
