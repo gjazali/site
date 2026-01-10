@@ -174,14 +174,14 @@ pre {
   justify-content: center;
 }
 
-.c-navbar-hamburger-toggle-icon {
+.c-navbar-hamburger-toggle-icon, .c-navbar-close-toggle-icon {
   display: none;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
-.c-navbar-hamburger-toggle-icon svg {
+.c-navbar-hamburger-toggle-icon svg, .c-navbar-close-toggle-icon svg {
   width: 22;
   height: 22;
 }
@@ -212,7 +212,7 @@ pre {
     overflow: hidden;
     flex-direction: column;
     align-items: center;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.15s ease-in-out;
     padding: 0;
   }
 
@@ -225,10 +225,22 @@ pre {
     display: block;
   }
 
+  .c-navbar-close-toggle-icon {
+    display: none;
+  }
+
   .c-navbar:has(.c-navbar-hamburger-toggle input[type="checkbox"]:checked) .c-navbar-navigation {
     margin-top: var(--spacing-large);
     margin-bottom: var(--spacing-large);
     max-height: 1000px;
+  }
+
+  .c-navbar:has(.c-navbar-hamburger-toggle input[type="checkbox"]:checked) .c-navbar-hamburger-toggle-icon {
+    display: none;
+  }
+
+  .c-navbar:has(.c-navbar-hamburger-toggle input[type="checkbox"]:checked) .c-navbar-close-toggle-icon {
+    display: block;
   }
 }
 
