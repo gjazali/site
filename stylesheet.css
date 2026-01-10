@@ -104,6 +104,10 @@
   .c-navbar-logo-text a {
     color: var(--white-dark);
   }
+
+  #about-me-profile-picture {
+    border: 2px solid var(--white-dark);
+  }
 }
 
 /* Basic elements */
@@ -141,6 +145,10 @@ pre {
   &:not(:last-child)  {
     margin-bottom: var(--spacing-medium);
   }
+}
+
+footer {
+  font-size: 12;
 }
 
 /* Content */
@@ -287,11 +295,20 @@ body:has(.c-navbar) .c-content-area {
 .c-card {
   padding: var(--spacing-small) var(--spacing-large) var(--spacing-small) var(--spacing-large);
   border: none;
+  box-sizing: border-box;
 
   margin: 0;
   &:not(:last-child)  {
     margin-bottom: var(--spacing-medium);
   }
+}
+
+.c-text-image {
+  height: 12px;
+}
+
+.c-text-image-number {
+  height: 9px;
 }
 
 /* Specifics */
@@ -312,7 +329,6 @@ body:has(.c-navbar) .c-content-area {
 
 #about-me-profile-picture {
   height: 160px;
-  border-radius: 5px;
 }
 
 #about-me-profile-picture-caption-container {
@@ -347,4 +363,44 @@ body:has(.c-navbar) .c-content-area {
 
 .about-me-details-individual-container p {
   font-size: 14;
+}
+
+.about-me-details-individual-container svg {
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 600px) {
+  #about-me-content-box {
+    flex-direction: column;
+  }
+}
+
+#contact-and-profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--spacing-large);
+}
+
+.contact-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: var(--spacing-small);
+}
+
+#contact-and-profile-container .c-card {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+#contact-information-footer {
+  margin-top: var(--spacing-medium);
+}
+
+@media screen and (max-width: 600px) {
+  #contact-and-profile-container {
+    flex-direction: column;
+  }
 }
