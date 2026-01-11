@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import MarkdownIt from "markdown-it";
+import MarkdownItFootnote from "markdown-it-footnote";
 
 function extractTitle(markdown, md) {
   const tokens = md.parse(markdown, {});
@@ -23,7 +24,8 @@ function extractTitle(markdown, md) {
 }
 
 export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
-  const md = new MarkdownIt();
+  const md = new MarkdownIt()
+    .use(MarkdownItFootnote);
 
   const inputDir = path.resolve(inputDirPath);
   const outputDir = path.resolve(outputDirPath);
