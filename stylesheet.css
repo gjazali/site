@@ -26,7 +26,7 @@
   --blue-medium-blend-white-light: #cce5ff;
 
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-monospace: monospace;
+  --font-family-monospace: "Inconsolata Regular", monospace;
 
   --spacing-ultrasmall: 2px;
   --spacing-extrasmall: 4px;
@@ -155,8 +155,18 @@ pre {
   }
 }
 
+pre, code {
+  font-family: var(--font-family-monospace);
+}
+
 footer {
   font-size: 12;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Inconsolata Regular";
+  src: url("./assets/fonts/inconsolata_regular.ttf");
 }
 
 /* Content */
