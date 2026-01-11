@@ -28,12 +28,15 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: monospace;
 
+  --spacing-ultrasmall: 2px;
+  --spacing-extrasmall: 4px;
   --spacing-small: 6px;
   --spacing-medium: 8px;
   --spacing-large: 10px;
   --spacing-extralarge: 12px;
   --spacing-huge: 14px;
   --spacing-extrahuge: 16px;
+  --spacing-ultrahuge: 22px;
   --spacing-navbar-bottom: 24px;
 
   --navbar-height: 58px; /* This is measured manually to make sure that the site doesn't need JS to function */
@@ -130,7 +133,7 @@ p {
   margin: 0;
 
   &:not(:last-child)  {
-    margin-bottom: var(--spacing-small);
+    margin-bottom: var(--spacing-large);
   }
 }
 
@@ -308,18 +311,33 @@ body:has(.c-navbar) .c-content-area {
   }
 }
 
+.c-card-title-3 {
+  margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
+}
+
+.c-card-title-3 {
+  &:first-child  {
+    margin-top: 0;
+  }
+}
+
 .c-text-image {
-  height: 12px;
+  pointer-events: none;
+}
+
+.c-text-image-letters {
+  height: 12.3;
 }
 
 .c-text-image-number {
-  height: 9px;
+  height: 9.3;
 }
 
 /* Specifics */
 #about-me-content-box {
   display: flex;
-  align-items: top;
+  align-items: flex-start;
   gap: var(--spacing-extrahuge);
 }
 
@@ -384,6 +402,7 @@ body:has(.c-navbar) .c-content-area {
 @media screen and (max-width: 600px) {
   #about-me-content-box {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -408,7 +427,7 @@ body:has(.c-navbar) .c-content-area {
 }
 
 #contact-information-footer {
-  margin-top: var(--spacing-medium);
+  margin-top: var(--spacing-ultrahuge);
 }
 
 @media screen and (max-width: 600px) {
