@@ -12,7 +12,7 @@
   },
   "license": "ISC",
   "author": "G.A. Jazali",
-  "type": "commonjs",
+  "type": "module",
   "main": "_worker.js",
   "scripts": {
     "build": "node scripts/build.js",
