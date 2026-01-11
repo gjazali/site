@@ -1,3 +1,3 @@
-import { generatePosts } from "./generate_posts";
+import { generatePosts } from "./generate_posts.js";
 
 generatePosts();
