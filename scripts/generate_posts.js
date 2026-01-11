@@ -31,7 +31,8 @@ export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
 
   const template = fs.readFileSync(templateFile, "utf8");
 
-  const files = fs.mkdirSync(outputDir, { recursive: true });
+  fs.mkdirSync(outputDir, { recursive: true });
+  const files = fs.readdirSync(inputDir);
 
   for (const file of files) {
     if (!file.endsWith(".md")) continue;
