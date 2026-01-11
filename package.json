@@ -1,0 +1,24 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "The source code for G.A. Jazali's personal site.",
+  "homepage": "https://github.com/gjazali/site#readme",
+  "bugs": {
+    "url": "https://github.com/gjazali/site/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjazali/site.git"
+  },
+  "license": "ISC",
+  "author": "G.A. Jazali",
+  "type": "commonjs",
+  "main": "_worker.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}
