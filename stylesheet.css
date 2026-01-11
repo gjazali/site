@@ -108,6 +108,11 @@
   #about-me-profile-picture {
     border: 2px solid var(--white-dark);
   }
+
+  #about-me-profile-picture-placeholder {
+    background-color: var(--black-extralight);
+    border: 2px solid var(--white-dark);
+  }
 }
 
 /* Basic elements */
@@ -325,6 +330,13 @@ body:has(.c-navbar) .c-content-area {
   margin-top: var(--spacing-small) !important;
   margin-bottom: var(--spacing-small) !important;
   gap: var(--spacing-large);
+}
+
+#about-me-profile-picture-placeholder {
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #about-me-profile-picture {
