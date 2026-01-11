@@ -1,3 +1,3 @@
 import { generatePosts } from "./generate_posts.js";
 
-generatePosts();
+generatePosts("../content/blog", "../public/blog", "../templates/blog.html");
