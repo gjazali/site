@@ -31,6 +31,21 @@ export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
   const outputDir = path.resolve(outputDirPath);
   const templateFile = path.resolve(templateFilePath);
 
+  if (!fs.existsSync(inputDir)) {
+    console.log("Input directory doesn't exist, skipping generation");
+    return;
+  }
+
+  const entries = fs.readdirSync(inputDir, { withFileTypes: true });
+  const markdownFiles = entries.filter(
+    (e) => e.isFile() && e.name.endsWith(".md")
+  );
+
+  if (markdownFiles.length === 0) {
+    console.log("No markdown files in input directory, skipping generation");
+    return;
+  }
+
   const template = fs.readFileSync(templateFile, "utf8");
 
   fs.mkdirSync(outputDir, { recursive: true });
