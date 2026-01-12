@@ -68,6 +68,10 @@
     text-decoration-style: solid;
   }
 
+  .c-button-link:link, .c-button-link:visited {
+    color: var(--white-dark);
+  }
+
   pre {
     background: var(--black-light);
   }
@@ -159,6 +163,10 @@ pre, code {
   font-family: var(--font-family-monospace);
 }
 
+img {
+  width: 100%;
+}
+
 footer {
   font-size: 12;
 }
@@ -184,6 +192,21 @@ footer {
   &:not(:last-child)  {
     margin-bottom: var(--spacing-medium);
   }
+}
+
+.c-post-navigation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--spacing-small);
+  width: 100%;
+  margin-bottom: var(--spacing-ultrahuge);
+}
+
+.c-post-navigation-secondary-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
 }
 
 /* Navbar */
@@ -296,18 +319,31 @@ body:has(.c-navbar) .c-content-area {
   border-radius: 0;
   min-width: 150px;
   font-size: 14;
+  height: 32px;
 }
 
 .c-e-button-main {
   border: 1px solid var(--blue-medium);
   background-color: var(--blue-medium);
-  color: var(--white-light);
+  color: var(--white-light) !important;
 }
 
 .c-e-button-main:hover {
   border: 1px solid var(--blue-light);
   background-color: var(--blue-light);
-  color: var(--white-light);
+  color: var(--white-light) !important;
+}
+
+.c-button-link {
+  -moz-appearance: button;
+  -ms-appearance: button;
+  -o-appearance: button;
+  -webkit-appearance: button;
+  appearance: button;
+  display: inline-block;
+  align-content: center;
+  padding: 0;
+  box-sizing: border-box; /* Draw the border inside the box instead of on it's outer edge */
 }
 
 .c-card {
@@ -399,6 +435,10 @@ body:has(.c-navbar) .c-content-area {
   flex-direction: row;
   align-items: center;
   gap: var(--spacing-small);
+}
+
+.about-me-details-individual-container img {
+  width: auto;
 }
 
 .about-me-details-individual-container p {
