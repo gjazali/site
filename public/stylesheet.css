@@ -437,6 +437,10 @@ body:has(.c-navbar) .c-content-area {
   gap: var(--spacing-small);
 }
 
+.about-me-details-individual-container img {
+  width: auto;
+}
+
 .about-me-details-individual-container p {
   font-size: 14;
 }
