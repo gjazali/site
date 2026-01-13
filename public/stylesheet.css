@@ -230,6 +230,7 @@ footer {
   align-items: center;
   padding: var(--spacing-huge) var(--spacing-extrahuge);
   box-sizing: border-box;
+  z-index: 9999;
 }
 
 .c-navbar ul {
