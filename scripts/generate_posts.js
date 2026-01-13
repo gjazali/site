@@ -61,7 +61,7 @@ export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
 
     const outputPath = path.join(
       outputDir,
-      file.replace(/\.md$/, ".html")
+      `${metadata.path}.html`
     );
 
     fs.writeFileSync(outputPath, html, "utf8");
