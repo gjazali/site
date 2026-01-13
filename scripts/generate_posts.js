@@ -3,26 +3,6 @@ import path from "path";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
 
-function extractTitle(markdown, md) {
-  const tokens = md.parse(markdown, {});
-
-  for (let i = 0; i < tokens.length; i++) {
-    const token = tokens[i];
-
-    if (
-      token.type === "heading_open" &&
-      token.tag === "h1"
-    ) {
-      const inline = tokens[i + 1];
-      if (inline && inline.type === "inline") {
-        return inline.content;
-      }
-    }
-  }
-
-  return null;
-}
-
 function parseTimestamp(input) {
   const normalized = input.replace(/([+-]\d{2})(\d{2})$/, "$1:$2");
 
@@ -85,8 +65,6 @@ export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
       "utf8"
     );
 
-    const title = extractTitle(markdown, md) ?? file.replace(/\.md$/, "");
-
     const rendered = md.render(markdown);
 
     const metadataFile = fs.readFileSync(
@@ -100,7 +78,8 @@ export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
 
     const html = template
       .replace("{{ POST_CONTENT }}", rendered)
-      .replace("{{ POST_TITLE }}", title)
+      .replace("{{ POST_TITLE }}", metadata.title)
+      .replace("{{ POST_TITLE_FOR_NAVIGATION }}", metadata.title)
       .replace("{{ POST_AUTHOR }}", metadata.author)
       .replace("{{ POST_CREATED }}", parseTimestamp(metadata.created))
       .replace("{{ POST_MODIFIED }}", parseTimestamp(metadata.modified));
