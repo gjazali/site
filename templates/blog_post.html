@@ -42,7 +42,12 @@
           <a class="c-button-link c-button" href="/blog/index.xml">RSS feed</a>
         </div>
       </div>
-      <!-- POST_CONTENT -->
+      <div class="c-card c-blog-metadata">
+        <p><b>Author:</b> {{ POST_AUTHOR }}</p>
+        <p><b>Posted on:</b> {{ POST_CREATED }}</p>
+        <p><b>Last edited on:</b> {{ POST_MODIFIED }}</p>
+      </div>
+      {{ POST_CONTENT }}
     </div>
   </body>
 </html>

@@ -200,7 +200,7 @@ footer {
   justify-content: space-between;
   gap: var(--spacing-small);
   width: 100%;
-  margin-bottom: var(--spacing-ultrahuge);
+  margin-bottom: var(--spacing-extrahuge);
 }
 
 .c-post-navigation-secondary-container {
@@ -334,6 +334,10 @@ body:has(.c-navbar) .c-content-area {
   color: var(--white-light) !important;
 }
 
+.c-e-button-icon-only {
+  min-width: 32px !important;
+}
+
 .c-button-link {
   -moz-appearance: button;
   -ms-appearance: button;
@@ -365,6 +369,19 @@ body:has(.c-navbar) .c-content-area {
 .c-card-title-3 {
   &:first-child  {
     margin-top: 0;
+  }
+}
+
+.c-blog-metadata {
+  margin-bottom: var(--spacing-ultrahuge);
+}
+
+.c-blog-metadata p {
+  font-size: 14;
+
+  margin: 0;
+  &:not(:last-child)  {
+    margin-bottom: var(--spacing-small);
   }
 }
 
