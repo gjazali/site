@@ -5,5 +5,7 @@
   "created": "2026-01-12T18:00:00+0700",
   "modified": "2026-01-12T18:00:00+0700",
   "reading_time": "00:03:00",
-  "path": "2026-01-12-about-this-site"
+  "path": "2026-01-12-about-this-site",
+  "description": "How I made this site and the rationale behind the tech stack I use",
+  "language": "en-us"
 }
