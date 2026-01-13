@@ -1,33 +1,8 @@
 import fs from "fs";
 import path from "path";
+import { parseTimestamp } from "./utils.js";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
-
-function parseTimestamp(input) {
-  const normalized = input.replace(/([+-]\d{2})(\d{2})$/, "$1:$2");
-
-  const date = new Date(normalized);
-
-  const datePart = new Intl.DateTimeFormat("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-    timeZone: "Asia/Jakarta", // matches GMT+07
-  }).format(date);
-
-  const timePart = new Intl.DateTimeFormat("en-GB", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone: "Asia/Jakarta",
-  }).format(date);
-
-  const offset = "GMT+07:00";
-
-  const result = `${datePart}, ${timePart} (${offset})`;
-
-  return result;
-}
 
 export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
   const md = new MarkdownIt()

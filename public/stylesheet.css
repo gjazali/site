@@ -203,6 +203,23 @@ footer {
   }
 }
 
+.c-e-content-box-post-list {
+  margin: 0;
+  &:not(:last-child)  {
+    margin-bottom: var(--spacing-huge);
+  }
+}
+
+.c-content-subtitle {
+  font-size: 14;
+}
+
+#blog-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
 .c-post-navigation-container {
   display: flex;
   flex-direction: row;
