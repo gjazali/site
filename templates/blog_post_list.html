@@ -36,8 +36,14 @@
     <div class="c-content-area">
       <h1>Blog</h1>
       <div id="blog-post-list">
-        <div class="c-card">
-          <p>You can view the blog posts below in their original markdown format <a href="https://github.com/gjazali/site/tree/main/content/blog">here</a>.</p>
+        <div id="blog-post-list-card-container">
+          <div class="c-card" id="blog-post-list-description">
+            <p>You can view the blog posts below in their original markdown format <a href="https://github.com/gjazali/site/tree/main/content/blog">here</a>.</p>
+          </div>
+          <div class="c-card" id="blog-post-list-rss">
+            <p>If you're using an RSS feed reader, subscribe to this blog's RSS feed by using the URL below.</p>
+            <a class="c-button c-e-button-main c-button-link" id="blog-post-list-rss-button" href="/blog/index.xml">RSS Feed</a>
+          </div>
         </div>
         <div>
           {{ POST_LIST }}

@@ -220,6 +220,27 @@ footer {
   gap: var(--spacing-large);
 }
 
+#blog-post-list-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--spacing-large);
+}
+
+#blog-post-list-card-container .c-card {
+  margin-bottom: 0;
+}
+
+#blog-post-list-description, #blog-post-list-rss {
+  width: 100%;
+}
+
+#blog-post-list-rss-button {
+  width: 100%;
+  margin-bottom: var(--spacing-extrasmall);
+}
+
 .c-post-navigation-container {
   display: flex;
   flex-direction: row;
