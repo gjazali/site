@@ -7,7 +7,9 @@
   --gray-dark: #383838;
   --gray-light: #a1a1a1;
 
+  --white-extradark: #D2D2D2;
   --white-dark: #e5e5e5;
+  --white-medium: #f2f2f2;
   --white-light: #ffffff;
 
   --blue-dark: #1f5c99;
@@ -47,8 +49,86 @@
 /* Mode specific settings */
 @media (prefers-color-scheme: light) {
   body {
-    background: var(--white-dark);
+    background: var(--white-light);
     color: var(--black-dark);
+  }
+
+  a:link, a:visited {
+    color: var(--blue-dark);
+  }
+
+  footer {
+    background-color: var(--white-medium);
+    color: rgb(from var(--black-dark) r g b / 25%);
+  }
+
+  footer a {
+    color: rgb(from var(--black-dark) r g b / 35%) !important;  /* Links are 1.2 times brighter in terms of percentage points */
+  }
+
+  .c-button-link:link, .c-button-link:visited {
+    color: var(--black-dark);
+  }
+
+  pre {
+    background: var(--white-dark);
+  }
+
+  .c-button {
+    border: 1px solid var(--gray-light);
+    background-color: var(--white-dark);
+    color: var(--black-dark);
+  }
+
+  .c-button:hover {
+    border: 1px solid var(--blue-medium-blend-gray-light);
+    background-color: var(--blue-medium-blend-white-dark);
+    color: var(--black-dark);
+  }
+
+  .c-card {
+    background: var(--white-dark);
+  }
+
+  .c-navbar {
+    background-color: var(--white-medium);
+  }
+
+  .c-navbar-hamburger-toggle-icon {
+    color: var(--black-dark);
+  }
+
+  .c-navbar-logo-text {
+    color: var(--black-dark);
+  }
+
+  .c-navbar-navigation a {
+    color: var(--black-dark);
+  }
+
+  .c-navbar-logo-text a {
+    color: var(--black-dark);
+  }
+
+  .c-content-tags {
+    color: rgb(from var(--black-dark) r g b / 40%);
+  }
+
+  .c-text-footer {
+    color: rgb(from var(--black-dark) r g b / 40%);
+  }
+
+  .c-text-footer a {
+    color: rgb(from var(--black-dark) r g b / 48%);
+  }
+
+  #about-me-profile-picture {
+    border: 2px solid var(--gray-light);
+  }
+
+  #about-me-profile-picture-placeholder {
+    background-color: var(--white-extradark);
+    border: 2px solid var(--gray-light);
   }
 }
 
@@ -58,16 +138,17 @@
     color: var(--white-dark);
   }
 
-  a:link {
+  a:link, a:visited {
     color: var(--blue-light);
   }
 
-  a:visited {
-    color: var(--blue-light);
+  footer {
+    background-color: var(--black-dark);
+    color: rgb(from var(--white-dark) r g b / 25%);
   }
 
-  a:hover {
-    text-decoration-style: solid;
+  footer a {
+    color: rgb(from var(--white-dark) r g b / 35%) !important;
   }
 
   .c-button-link:link, .c-button-link:visited {
@@ -114,6 +195,18 @@
     color: var(--white-dark);
   }
 
+  .c-content-tags {
+    color: rgb(from var(--white-dark) r g b / 40%);
+  }
+
+  .c-text-footer {
+    color: rgb(from var(--white-dark) r g b / 40%);
+  }
+
+  .c-text-footer a {
+    color: rgb(from var(--white-dark) r g b / 48%);
+  }
+
   #about-me-profile-picture {
     border: 2px solid var(--white-dark);
   }
@@ -146,6 +239,10 @@ p {
 a {
   text-decoration: underline;
   text-decoration-style: dotted;
+}
+
+a:hover {
+  text-decoration-style: solid;
 }
 
 pre {
@@ -183,16 +280,10 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: var(--black-dark);
-  color: rgb(from var(--white-dark) r g b / 25%);
   font-size: 10;
   text-align: center;
   padding: var(--spacing-huge);
   z-index: 9998;
-}
-
-footer a {
-  color: rgb(from var(--white-dark) r g b / 35%) !important;
 }
 
 /* Fonts */
@@ -242,16 +333,10 @@ footer a {
 .c-content-tags {
   font-size: 12;
   font-style: italic;
-  color: rgb(from var(--white-dark) r g b / 40%);
 }
 
 .c-text-footer {
   font-size: 12;
-  color: rgb(from var(--white-dark) r g b / 40%);
-}
-
-.c-text-footer a {
-  color: rgb(from var(--white-dark) r g b / 48%); /* Links are 1.2 times brighter in terms of percentage points */
 }
 
 #blog-post-list, #portfolio-post-list {
@@ -429,6 +514,10 @@ body:has(footer) {
 
 .c-e-button-icon-only {
   min-width: 32px !important;
+}
+
+.c-button-link[class*="c-e-button-main"]:link, .c-button-link[class*="c-e-button-main"]:visited {
+  color: var(--white-dark);
 }
 
 .c-button-link {
