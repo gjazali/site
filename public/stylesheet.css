@@ -38,8 +38,10 @@
   --spacing-extrahuge: 16px;
   --spacing-ultrahuge: 22px;
   --spacing-navbar-bottom: 24px;
+  --spacing-footer-top: 24px;
 
   --navbar-height: 58px; /* This is measured manually to make sure that the site doesn't need JS to function */
+  --footer-height: 43px;
 }
 
 /* Mode specific settings */
@@ -177,7 +179,20 @@ sub {
 }
 
 footer {
-  font-size: 12;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--black-dark);
+  color: rgb(from var(--white-dark) r g b / 25%);
+  font-size: 10;
+  text-align: center;
+  padding: var(--spacing-huge);
+  z-index: 9998;
+}
+
+footer a {
+  color: rgb(from var(--white-dark) r g b / 35%) !important;
 }
 
 /* Fonts */
@@ -221,6 +236,11 @@ footer {
 .c-content-tags {
   font-size: 12;
   font-style: italic;
+  color: rgb(from var(--white-dark) r g b / 50%);
+}
+
+.c-text-footer {
+  font-size: 12;
   color: rgb(from var(--white-dark) r g b / 50%);
 }
 
@@ -365,8 +385,12 @@ footer {
   }
 }
 
-body:has(.c-navbar) .c-content-area {
+body:has(.c-navbar) {
   margin-top: calc(var(--navbar-height) + var(--spacing-navbar-bottom));
+}
+
+body:has(.c-text-footer) {
+  margin-bottom: calc(var(--footer-height) + var(--spacing-footer-top));
 }
 
 /* Components */
