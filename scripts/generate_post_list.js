@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { parseTimestamp, parseMetadataDir, metadataDescendingSorter } from "./utils.js";
 
-const itemTemplate = `<div class="c-content-box c-e-content-box-post-list"><div class="c-content-title"><p><a href="/{{ POST_PATH }}">{{ POST_TITLE }}</a></p></div><div class="c-content-subtitle"><p>{{ POST_CREATED }}</p></div></div>`;
+const itemTemplate = `<div class="c-content-box c-e-content-box-post-list"><div class="c-content-subtitle"><p>{{ POST_CREATED }}</p></div><div class="c-content-title"><p><a href="/{{ POST_PATH }}">{{ POST_TITLE }}</a></p></div><div class="c-content-description"><p>{{ POST_DESCRIPTION }}</p></div><div class="c-content-tags"><p><b>Category:</b> {{ POST_CATEGORY }}</p></div></div>`;
 
 export function generatePostList(inputDirPath, outputDirPath, templateFilePath, postListDirPath) {
   let items = [];
@@ -16,7 +16,9 @@ export function generatePostList(inputDirPath, outputDirPath, templateFilePath, 
     const item = itemTemplate
       .replace("{{ POST_PATH }}", `${postListDirPath}/${metadata.path}`)
       .replace("{{ POST_TITLE }}", metadata.title)
-      .replace("{{ POST_CREATED }}", parseTimestamp(metadata.created));
+      .replace("{{ POST_CREATED }}", parseTimestamp(metadata.created))
+      .replace("{{ POST_DESCRIPTION }}", metadata.description)
+      .replace("{{ POST_CATEGORY }}", metadata.category.sort().join(", "));
 
     items.push(item);
   }
