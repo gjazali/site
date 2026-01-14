@@ -389,7 +389,7 @@ body:has(.c-navbar) {
   margin-top: calc(var(--navbar-height) + var(--spacing-navbar-bottom));
 }
 
-body:has(.c-text-footer) {
+body:has(footer) {
   margin-bottom: calc(var(--footer-height) + var(--spacing-footer-top));
 }
 
