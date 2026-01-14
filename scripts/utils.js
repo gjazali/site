@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { minify } from "html-minifier-terser";
 
 export function parseTimestamp(input) {
   const date = new Date(input);
@@ -61,4 +62,20 @@ export function metadataDescendingSorter(a, b) {
     return -1; // `a` comes before `b`
   else // equal
     return 0;
+}
+
+export async function minifyHTML(inputFile) {
+  const outputFile = await minify(inputFile, {
+    collapseWhitespace: true,
+    removeComments: true,
+    minifyCSS: true,
+    minifyJS: true
+  });
+
+  return outputFile;
+}
+
+export function minifyCSS(inputFile) {
+  // TODO: Implement CSS minification here
+  return inputFile;
 }

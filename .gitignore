@@ -1,4 +1,3 @@
 node_modules
-public/blog
-public/portfolio
-public/cv
+public
+!public/assets

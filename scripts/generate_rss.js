@@ -1,9 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { parseMetadataDir, metadataDescendingSorter } from "./utils.js";
-
-const rssItemTemplate = `<item><title>{{ RSS_ITEM_TITLE }}</title><link>{{ RSS_ITEM_LINK }}</link><description>{{ RSS_ITEM_DESCRIPTION }}</description><pubDate>{{ RSS_ITEM_PUBLICATION_DATE }}</pubDate><language>{{ RSS_ITEM_LANGUAGE }}</language>{{ RSS_ITEM_CATEGORIES }}</item>`;
-const rssItemCategoryTemplate = `<category>{{ RSS_ITEM_CATEGORY }}</category>`;
+import { rssItemTemplate, rssItemCategoryTemplate } from "./components.js";
 
 export function generateRSS(inputDirPath, outputDirPath, templateFilePath, rssFileName, feedSourceDomain, feedSourceDir) {
   let items = [];

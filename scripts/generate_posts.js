@@ -1,10 +1,11 @@
 import fs from "fs";
 import path from "path";
-import { parseTimestamp } from "./utils.js";
+import { parseTimestamp, minifyHTML } from "./utils.js";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
+import { navbar, footer } from "./components.js";
 
-export function generatePosts(inputDirPath, outputDirPath, templateFilePath, postListName, postListPath) {
+export async function generatePosts(inputDirPath, outputDirPath, templateFilePath, postListName, postListPath) {
   const md = new MarkdownIt()
     .use(MarkdownItFootnote);
 
@@ -52,6 +53,8 @@ export function generatePosts(inputDirPath, outputDirPath, templateFilePath, pos
     const metadata = JSON.parse(metadataFile);
 
     const html = template
+      .replace("{{ COMPONENT_NAVBAR }}", navbar)
+      .replace("{{ COMPONENT_FOOTER }}", footer)
       .replace("{{ POST_CONTENT }}", rendered)
       .replace("{{ POST_TITLE }}", metadata.title)
       .replace("{{ POST_TITLE_FOR_NAVIGATION }}", metadata.title)
@@ -66,7 +69,9 @@ export function generatePosts(inputDirPath, outputDirPath, templateFilePath, pos
       `${metadata.path}.html`
     );
 
-    fs.writeFileSync(outputPath, html, "utf8");
+    const minifiedHTML = await minifyHTML(html);
+
+    fs.writeFileSync(outputPath, minifiedHTML, "utf8");
 
     console.log(`Generated ${outputPath}`);
   }
