@@ -208,6 +208,12 @@ footer a {
   margin-right: auto;
 }
 
+.c-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-ultrahuge);
+}
+
 .c-content-box {
   padding: 0;
   border: none;
@@ -236,12 +242,16 @@ footer a {
 .c-content-tags {
   font-size: 12;
   font-style: italic;
-  color: rgb(from var(--white-dark) r g b / 50%);
+  color: rgb(from var(--white-dark) r g b / 40%);
 }
 
 .c-text-footer {
   font-size: 12;
-  color: rgb(from var(--white-dark) r g b / 50%);
+  color: rgb(from var(--white-dark) r g b / 40%);
+}
+
+.c-text-footer a {
+  color: rgb(from var(--white-dark) r g b / 48%); /* Links are 1.2 times brighter in terms of percentage points */
 }
 
 #blog-post-list, #portfolio-post-list {
@@ -558,6 +568,14 @@ body:has(footer) {
 
 #contact-and-profile-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--spacing-large);
+}
+
+#contact-container {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
@@ -577,11 +595,11 @@ body:has(footer) {
 }
 
 #contact-information-footer {
-  margin-top: var(--spacing-ultrahuge);
+  margin-top: var(--spacing-huge);
 }
 
 @media screen and (max-width: 600px) {
-  #contact-and-profile-container {
+  #contact-container {
     flex-direction: column;
   }
 }
