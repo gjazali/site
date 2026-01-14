@@ -465,11 +465,11 @@ body:has(footer) {
   }
 }
 
-.c-blog-metadata {
+.c-post-metadata {
   margin-bottom: var(--spacing-ultrahuge);
 }
 
-.c-blog-metadata p {
+.c-post-metadata p {
   font-size: 14;
 
   margin: 0;

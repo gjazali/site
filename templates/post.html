@@ -36,12 +36,12 @@
     <div class="c-content-area">
       <div class="c-post-navigation-container">
         <div class="c-post-navigation-primary-container">
-          <p><a href="/blog">Blog</a>&ensp;/&ensp;{{ POST_TITLE_FOR_NAVIGATION }}</p>
+          <p><a href="/{{ POST_LIST_PATH }}">{{ POST_LIST_NAME }}</a>&ensp;/&ensp;{{ POST_TITLE_FOR_NAVIGATION }}</p>
         </div>
         <div class="c-post-navigation-secondary-container">
         </div>
       </div>
-      <div class="c-card c-blog-metadata">
+      <div class="c-card c-post-metadata">
         <p><b>Author:</b> {{ POST_AUTHOR }}</p>
         <p><b>Posted on:</b> {{ POST_CREATED }}</p>
         <p><b>Last edited on:</b> {{ POST_MODIFIED }}</p>

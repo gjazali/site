@@ -4,7 +4,7 @@ import { parseTimestamp } from "./utils.js";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
 
-export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
+export function generatePosts(inputDirPath, outputDirPath, templateFilePath, postListName, postListPath) {
   const md = new MarkdownIt()
     .use(MarkdownItFootnote);
 
@@ -57,7 +57,9 @@ export function generatePosts(inputDirPath, outputDirPath, templateFilePath) {
       .replace("{{ POST_TITLE_FOR_NAVIGATION }}", metadata.title)
       .replace("{{ POST_AUTHOR }}", metadata.author)
       .replace("{{ POST_CREATED }}", parseTimestamp(metadata.created))
-      .replace("{{ POST_MODIFIED }}", parseTimestamp(metadata.modified));
+      .replace("{{ POST_MODIFIED }}", parseTimestamp(metadata.modified))
+      .replace("{{ POST_LIST_NAME }}", postListName)
+      .replace("{{ POST_LIST_PATH }}", postListPath);
 
     const outputPath = path.join(
       outputDir,
