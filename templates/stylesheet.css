@@ -43,7 +43,7 @@
   --spacing-footer-top: 24px;
 
   --navbar-height: 58px; /* This is measured manually to make sure that the site doesn't need JS to function */
-  --footer-height: 43px;
+  --footer-height: 31px;
 }
 
 /* Mode specific settings */
@@ -282,7 +282,7 @@ footer {
   width: 100%;
   font-size: 10;
   text-align: center;
-  padding: var(--spacing-huge);
+  padding: var(--spacing-medium);
   z-index: 9998;
 }
 
@@ -555,16 +555,27 @@ body:has(footer) {
 }
 
 .c-post-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.c-post-metadata-general-info {
   margin-bottom: var(--spacing-ultrahuge);
 }
 
-.c-post-metadata p {
+.c-post-metadata-general-info p {
   font-size: 14;
 
   margin: 0;
   &:not(:last-child)  {
     margin-bottom: var(--spacing-small);
   }
+}
+
+.c-post-metadata-category {
+  font-size: 14;
+  font-style: italic;
 }
 
 .c-text-image {

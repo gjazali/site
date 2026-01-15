@@ -61,6 +61,7 @@ export async function generatePosts(inputDirPath, outputDirPath, templateFilePat
       .replace("{{ POST_AUTHOR }}", metadata.author)
       .replace("{{ POST_CREATED }}", parseTimestamp(metadata.created))
       .replace("{{ POST_MODIFIED }}", parseTimestamp(metadata.modified))
+      .replace("{{ POST_CATEGORY }}", metadata.category.sort().join(", "))
       .replace("{{ POST_LIST_NAME }}", postListName)
       .replace("{{ POST_LIST_PATH }}", postListPath);
 

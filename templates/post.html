@@ -15,10 +15,15 @@
         <div class="c-post-navigation-secondary-container">
         </div>
       </div>
-      <div class="c-card c-post-metadata">
-        <p><b>Author:</b> {{ POST_AUTHOR }}</p>
-        <p><b>Posted on:</b> {{ POST_CREATED }}</p>
-        <p><b>Last edited on:</b> {{ POST_MODIFIED }}</p>
+      <div class="c-post-metadata">
+        <div class="c-card c-post-metadata-general-info">
+          <p><b>Author:</b> {{ POST_AUTHOR }}</p>
+          <p><b>Posted on:</b> {{ POST_CREATED }}</p>
+          <p><b>Last edited on:</b> {{ POST_MODIFIED }}</p>
+        </div>
+        <div class="c-post-metadata-category">
+          <p><b>Category:</b> {{ POST_CATEGORY }}</p>
+        </div>
       </div>
       {{ POST_CONTENT }}
     </div>
