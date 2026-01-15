@@ -7,6 +7,9 @@ import { generateRSS } from "./generate_rss.js";
 console.log(`Generating stylesheet...`);
 generateCSS("templates/stylesheet.css", "public", "stylesheet");
 
+console.log(`Generating 404 error page...`);
+await generateGenericPage("templates/404.html", "public", "404");
+
 console.log(`Generating main page...`);
 await generateGenericPage("templates/main_page.html", "public", "index");
 

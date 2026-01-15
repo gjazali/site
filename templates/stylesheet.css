@@ -606,6 +606,20 @@ body:has(footer) {
 }
 
 /* Specifics */
+#error-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+#error-404-message {
+  max-width: 600px;
+  gap: 0;
+}
+
 #about-me-content-box {
   display: flex;
   align-items: flex-start;
