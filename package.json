@@ -21,6 +21,8 @@
   "dependencies": {
     "html-minifier-terser": "^7.2.0",
     "markdown-it": "^14.1.0",
-    "markdown-it-footnote": "^4.0.0"
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-math": "^5.2.1",
+    "temml": "^0.11.11"
   }
 }

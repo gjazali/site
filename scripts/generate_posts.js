@@ -3,11 +3,13 @@ import path from "path";
 import { parseTimestamp, minifyHTML } from "./utils.js";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
+import markdownItMathTemml from "markdown-it-math/temml";
 import { navbar, footer } from "./components.js";
 
 export async function generatePosts(inputDirPath, outputDirPath, templateFilePath, postListName, postListPath) {
   const md = new MarkdownIt()
-    .use(MarkdownItFootnote);
+    .use(MarkdownItFootnote)
+    .use(markdownItMathTemml);
 
   const inputDir = path.resolve(inputDirPath);
   const outputDir = path.resolve(outputDirPath);

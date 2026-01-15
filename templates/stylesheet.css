@@ -110,6 +110,10 @@
     color: var(--black-dark);
   }
 
+  .c-content-subtitle {
+    color: rgb(from var(--black-dark) r g b / 40%);
+  }
+
   .c-content-tags {
     color: rgb(from var(--black-dark) r g b / 40%);
   }
@@ -193,6 +197,10 @@
 
   .c-navbar-logo-text a {
     color: var(--white-dark);
+  }
+
+  .c-content-subtitle {
+    color: rgb(from var(--white-dark) r g b / 40%);
   }
 
   .c-content-tags {
@@ -316,10 +324,17 @@ footer {
 }
 
 .c-e-content-box-post-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-extrasmall);
   margin: 0;
   &:not(:last-child)  {
     margin-bottom: var(--spacing-ultrahuge);
   }
+}
+
+.c-content-title {
+  font-weight: bold;
 }
 
 .c-content-subtitle {
