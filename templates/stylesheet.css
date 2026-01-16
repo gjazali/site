@@ -311,7 +311,7 @@ footer {
 .c-group {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-ultrahuge);
+  gap: var(--spacing-ultraenormous);
 }
 
 .c-content-box {
