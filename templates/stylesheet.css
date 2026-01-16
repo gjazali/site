@@ -622,7 +622,7 @@ body:has(footer) {
 #about-me-content-box {
   display: flex;
   align-items: flex-start;
-  gap: var(--spacing-extrahuge);
+  gap: var(--spacing-ultrahuge);
 }
 
 #about-me-profile-picture-container {
