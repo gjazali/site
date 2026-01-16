@@ -241,7 +241,7 @@ p {
   margin: 0;
 
   &:not(:last-child)  {
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--spacing-huge);
   }
 }
 
