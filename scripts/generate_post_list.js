@@ -16,6 +16,7 @@ export async function generatePostList(inputDirPath, outputDirPath, templateFile
       .replace("{{ POST_PATH }}", `${postListDirPath}/${metadata.path}`)
       .replace("{{ POST_TITLE }}", metadata.title)
       .replace("{{ POST_CREATED }}", parseTimestamp(metadata.created))
+      .replace("{{ POST_AUTHOR }}", metadata.author)
       .replace("{{ POST_DESCRIPTION }}", metadata.description)
       .replace("{{ POST_CATEGORY }}", metadata.category.sort().join(", "));
 

@@ -39,8 +39,9 @@
   --spacing-huge: 14px;
   --spacing-extrahuge: 16px;
   --spacing-ultrahuge: 22px;
-  --spacing-navbar-bottom: 24px;
-  --spacing-footer-top: 24px;
+  --spacing-enormous: 24px;
+  --spacing-extraenormous: 26px;
+  --spacing-ultraenormous: 28px;
 
   --navbar-height: 58px; /* This is measured manually to make sure that the site doesn't need JS to function */
   --footer-height: 31px;
@@ -233,7 +234,7 @@ html {
 }
 
 body {
-  margin: var(--spacing-navbar-bottom) var(--spacing-extrahuge) var(--spacing-extrahuge);
+  margin: var(--spacing-enormous) var(--spacing-extrahuge) var(--spacing-extrahuge);
 }
 
 p {
@@ -326,15 +327,13 @@ footer {
 .c-e-content-box-post-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-extrasmall);
+  gap: var(--spacing-small);
+  line-height: 1.3;
+
   margin: 0;
   &:not(:last-child)  {
-    margin-bottom: var(--spacing-ultrahuge);
+    margin-bottom: var(--spacing-ultraenormous);
   }
-}
-
-.c-content-title {
-  font-weight: bold;
 }
 
 .c-content-subtitle {
@@ -357,7 +356,7 @@ footer {
 #blog-post-list, #portfolio-post-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-ultrahuge);
+  gap: var(--spacing-ultraenormous);
 }
 
 #blog-post-list-card-container, #portfolio-post-list-card-container {
@@ -439,7 +438,7 @@ footer {
 
 .c-navbar-logo-text {
   font-size: 20;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0px;
 }
 
@@ -496,11 +495,11 @@ footer {
 }
 
 body:has(.c-navbar) {
-  margin-top: calc(var(--navbar-height) + var(--spacing-navbar-bottom));
+  margin-top: calc(var(--navbar-height) + var(--spacing-enormous));
 }
 
 body:has(footer) {
-  margin-bottom: calc(var(--footer-height) + var(--spacing-footer-top));
+  margin-bottom: calc(var(--footer-height) + var(--spacing-enormous));
 }
 
 /* Components */

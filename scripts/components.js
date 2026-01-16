@@ -36,7 +36,7 @@ export const footer = `
 export const postItemTemplate = `
   <div class="c-content-box c-e-content-box-post-list">
     <div class="c-content-subtitle">
-      <p>{{ POST_CREATED }}</p>
+      <p>{{ POST_CREATED }}&ensp;&middot;&ensp;{{ POST_AUTHOR }}</p>
     </div>
     <div class="c-content-title">
       <p><a href="/{{ POST_PATH }}">{{ POST_TITLE }}</a></p>
