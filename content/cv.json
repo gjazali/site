@@ -1,0 +1,433 @@
+{
+  "experience": [
+    {
+      "position": "Tech Intern",
+      "company": {
+        "name": "Apple Developer Academy at Universitas Ciputra",
+        "site": "https://developer.apple.com/academies/"
+      },
+      "type": "Internship",
+      "start_date": "2025-02",
+      "end_date": "2025-12",
+      "location": "Surabaya, Indonesia",
+      "description": "The program supports a ten-month-long study at the Apple Developer Academy in Universitas Ciputra, Surabaya, Indonesia for the 2025 cohort.",
+      "responsibilities": [],
+      "projects": [
+        {
+          "name": "Soon",
+          "description": "'Soon' is a narrative-driven 2D pixel game built using Unity, where you will guide the main character, Willow, through her emotional journey of aging. I wrote the kinematic character controller for this game from scratch.",
+          "link": "https://jazali.itch.io/soon/"
+        },
+        {
+          "name": "BookIt",
+          "description": "'BookIt' is an app tailor made for the employees of Ciputra Hospital Surabaya to reserve meeting rooms and company drivers, which are highly limited in numbers. The app’s driver booking feature utilizes a carpool system, where a smart algorithm decides how an employee can be fit into an existing booking based on multiple metrics.",
+          "link": null
+        },
+        {
+          "name": "TipsyBunny",
+          "description": "'TipsyBunny' is a 3D multiplayer game built using Apple’s RealityKit and GameKit framework where you play as drunken bunnies and compete in throwing wine bottles at each other. I was the tech lead for this project.",
+          "link": null
+        },
+        {
+          "name": "BirdBox",
+          "description": "'BirdBox' is a 3D co-op augmented reality (AR) game built using Apple’s ARKit framework where each player attempts to best the other in a chicken fight.",
+          "link": null
+        },
+        {
+          "name": "English Club",
+          "description": "Established a club to help other learners in the academy on their English speaking skills. This includes organizing public speaking/presentation workshops and an online collaborative session with learners in the Apple Developer Academy at POSTECH in Pohang, South Korea",
+          "link": null
+        }
+      ]
+    },
+    {
+      "position": "Consulting System Engineer",
+      "company": {
+        "name": "PT Kanisius",
+        "site": "https://kanisiusmedia.co.id/"
+      },
+      "type": "Contract",
+      "start_date": "2024-08",
+      "end-date": null,
+      "location": "Yogyakarta, Indonesia",
+      "description": null,
+      "responsibilities": [
+        {
+          "name": "Mail Server",
+          "description": "Implementing and managing the software-side architecture and security of the company's mail server: troubleshooting security and network problems, responding to and mitigating network security breaches, active management of server."
+        }
+      ],
+      "projects": []
+    },
+    {
+      "position": "Teaching Assistant for <i>INFO109: Non-Linear Data Structures</i>",
+      "company": {
+        "name": "Universitas Sanata Dharma",
+        "site": "https://www.usd.ac.id/"
+      },
+      "type": "Part-time",
+      "start_date": "2024-08",
+      "end_date": "2024-12",
+      "location": "Yogyakarta, Indonesia",
+      "description": null,
+      "responsibilities": [
+        {
+          "name": "Teaching",
+          "description": "Assisting in teaching the recitation sessions for the Fall 2024 class of INFO109: Non-Linear Data Structures."
+        }
+      ],
+      "projects": []
+    },
+    {
+      "position": "Student IT Staff",
+      "company": {
+        "name": "Universitas Sanata Dharma",
+        "site": "https://www.usd.ac.id/"
+      },
+      "type": "Part-time",
+      "start_date": "2024-07",
+      "end_date": "2024-08",
+      "location": "Yogyakarta, Indonesia",
+      "description": null,
+      "responsibilities": [
+        {
+          "name": "Database Laboratory Maintainer",
+          "description": "Maintaining the computing infrastructure of the university’s Database Laboratory."
+        }
+      ],
+      "projects": [
+        {
+          "name": "Thesis Document File Server",
+          "description": "Establishing and maintaining an in-house shared file pool server for the archival of the Informatics department thesis documents.",
+          "link": null
+        }
+      ]
+    },
+    {
+      "position": "Co&ndash;Student Representative",
+      "company": {
+        "name": "Indonesian International Student Mobility Awards (IISMA)",
+        "site": null
+      },
+      "type": "Full-time",
+      "start_date": "2023-4",
+      "end_date": "2023-12",
+      "location": "Philadelphia, PA, United States of America",
+      "description": null,
+      "responsibilities": [
+        {
+          "name": "Leadership",
+          "description": "Assisting the Student Representative in their duties in leading 20 national scholarship awardees at the University of Pennsylvania in fulfilling the IISMA program."
+        }
+      ],
+      "projects": [
+        {
+          "name": "BATIK Challenge",
+          "description": "Leading two groups in volunteering on two Bethesda Project homeless shelter sites."
+          "link": null,
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": {
+        "name": "Universitas Sanata Dharma",
+        "site": "https://www.usd.ac.id/"
+      },
+      "start_date": "2021-08",
+      "end_date": "2025-01",
+      "location": "Yogyakarta, Indonesia",
+      "degree": "Bachelor's Degree in Computer Science/Informatics (S.Kom.)",
+      "grades": {
+        "name": "CGPA",
+        "value": 3.92/4.00 (Magna cumlaude)"
+      },
+      "relevant_courses": [
+        "NETW108: Network Performance Measurement and Analysis",
+        "INFO115: Machine Learning",
+        "INFO117: Cryptography",
+        "INFO110: Advanced Object-Oriented Programming",
+        "INFO106: Data Analysis Programming",
+        "INFO109: Non-Linear Data Structures",
+        "MATE105: Linear Algebra",
+        "MATE103: Calculus",
+        "STTK101: Probability Theory"
+      ],
+      "description": "I graduated early&mdash;the total length of my studies was 3.5 years out of the normal 4 years."
+    },
+    {
+      "institution": {
+        "name": "University of Pennsylvania",
+        "site": "https://www.upenn.edu/"
+      },
+      "start_date": "2023-08",
+      "end_date": "2023-12",
+      "location": "Philadelphia, PA, United States of America",
+      "degree": "International Guest Student Program (IGSP), School of Arts & Sciences",
+      "grades": {
+        "name": "Grades Average",
+        "value": "86.38%"
+      },
+      "relevant_courses": [
+        "CIS 5810: Computer Vision & Computational Photography",
+        "CIS 5510: Computer & Network Security",
+        "MATH 1700: Ideas in Mathematics",
+        "ANTH 0050: Great Transformations"
+      ],
+      "description": "I studied as a foreign undergraduate exchange student at Penn's College of Arts & Sciences under the International Guest Student Program (IGSP) during the Fall 2023 semester. My studies during this time were fully funded under the Indonesian International Student Mobility Awards (IISMA) scholarship scheme. During the course of the semester, I took two graduate-level (master's/doctoral) computer science courses as an undergraduate student."
+    },
+    {
+      "institution": {
+        "name": "Budi Mulia Dua International High School",
+        "site": "https://bmd.sch.id/"
+      },
+      "start_date": "2018-07",
+      "end_date": "2021-06",
+      "location": "Yogyakarta, Indonesia",
+      "degree": "Secondary Education, Natural Sciences",
+      "grades": {
+        "name": "Grades Average",
+        "value": "86.07%"
+      },
+      "relevant_courses": [],
+      "description": "I graduated from the <a href="https://global.act.org/content/global/en/global-programs/global-assessment-certificate-programs.html">Global Assessment Certificate Program (GAC)</a>, which was administered by American College Test, Inc. (ACT, Inc.). Its curriculum—an international, English-language one—was undertaken alongside the national Indonesian high school curriculum. During my time in high school, I also participated in a geological scientific research collaboration in Japan with students of Ritsumeikan Keisho Senior High School and Kaisei Senior High School."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Specialized Area",
+      "list": [
+        "iOS Development",
+        "Web Development",
+        "Game Development",
+        "Java Development",
+        "Computer Vision & Computational Photography",
+        "Network Security",
+        "Cryptography",
+        "Computer Network Infrastructures",
+        "Linux Server Administration",
+        "Applied Mathematics"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "list": [
+        "Python",
+        "R",
+        "C",
+        "C++",
+        "C#",
+        "Swift",
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "Lua",
+        "Bash (and other Shell-derived scripting languages)",
+        "SQL",
+        "NASM Assembly",
+        "MATLAB"
+      ]
+    },
+    {
+      "name": "Markup Languages",
+      "list": [
+        "HTML",
+        "XML",
+        "LaTeX",
+        "Markdown"
+      ]
+    },
+    {
+      "name": "Web Technologies & Infrastructures",
+      "list": [
+        "Laravel",
+        "Node.js",
+        "React",
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "Oracle Cloud Infrastructure (OCI)"
+      ]
+    },
+    {
+      "name": "Database Systems",
+      "list": [
+        "MySQL",
+        "MariaDB",
+        "SQLite",
+        "Oracle Database",
+        "Cloudflare D1"
+      ]
+    },
+    {
+      "name": "Data Science & Machine Learning",
+      "list": [
+        "TensorFlow",
+        "PyTorch",
+        "OpenCV",
+        "MATLAB Computer Vision Toolbox",
+        "Pandas",
+        "NumPy",
+        "SciPy",
+        "Scikit"
+      ]
+    },
+    {
+      "name": "DevOps & Version Control",
+      "list": [
+        "Matplotlib",
+        "Wolfram Mathematica",
+        "MATLAB Statistics and Machine Learning Toolbox"
+      ]
+    }
+  ],
+  "honors_and_awards": [
+    {
+      "name": "IISMA 2023 Fully-Funded Scholarship to study at the University of Pennsylvania, USA",
+      "institution": {
+        "name": "Indonesian International Student Mobility Awards (IISMA), Indonesian Ministry of Education, Culture, Research, and Technology",
+        "site": "https://kemdiktisaintek.go.id/"
+      },
+      "date": "2023-04",
+      "description": "This is a fully-funded scholarship to study at the University of Pennsylvania for one semester from the Indonesian Government's Indonesian International Student Mobility Awards (IISMA) program."
+    },
+    {
+      "name": "Indonesian National Science Olympiad (OSN) Biology at the Provincial Stage of the Special Region of Yogyakarta",
+      "institution": {
+        "name": "Pusat Prestasi Nasional (Puspresnas), Indonesian Ministry of Education, Culture, Research, and Technology",
+        "site": "https://pusatprestasinasional.kemendikdasmen.go.id/"
+      },
+      "date": "2020-03",
+      "description": "I was ranked 23<sup>rd</sup> among all the competition's participants in the Special Region of Yogyakarta province, Indonesia."
+    }
+  ],
+  "volunteer_experience": [
+    {
+      "position": "Student Volunteer",
+      "institution": {
+        "name": "Bethesda Project",
+        "site": "https://www.bethesdaproject.org/"
+      },
+      "date": "2023-09",
+      "description": "I led two volunteering groups in two Bethesda Project–run homeless shelters in Philadelphia, PA, United States of America."
+    },
+    {
+      "position": "Student Tutor",
+      "institution": {
+        "name": "The Australian Consortium for 'In-Country' Indonesian Studies",
+        "site": "https://www.acicis.edu.au/"
+      },
+      "date": "2022-11",
+      "description": "I volunteered as a student tutor for Monash University students in learning Bahasa Indonesia through Lembaga Bahasa Sanata Dharma University's ILCIC (Indonesian Language and Culture Intensive Course) in collaboration with Monash University's Global Immersion Guarantee (GIG) program and ACICIS (Australian Consortium for `In-Country' Indonesian Studies)."
+    },
+    {
+      "position": "Student Tutor",
+      "institution": {
+        "name": "Society for Informatics Students, Universitas Sanata Dharma",
+        "site": "https://www.usd.ac.id/"
+      },
+      "date": "2022-09",
+      "description": "In the Universitas Sanata Dharma Informatics major's Informatika Belajar program, I tutored newly-admitted students in familiarizing themselves with the basics of programming."
+    },
+    {
+      "position": "Student Volunteer",
+      "institution": {
+        "name": "Sekolah Luar Biasa/A Yaketunis",
+        "site": null
+      },
+      "date": "2018-10",
+      "description": "I volunteered in a special school in Yogyakarta, where I helped with the day-to-day activities of blind students."
+    }
+  ],
+  "licenses_and_certifications": [
+    {
+      "name": "Duolingo English Test (DET) Certified English Proficiency",
+      "certification_link": "https://certs.duolingo.com/f65a26f3ab35569fbe1f72854b48e452",
+      "date": "2023-02",
+      "institution": {
+        "name": "Duolingo English Test",
+        "site": "https://englishtest.duolingo.com/"
+      },
+      "description": "Score: 155/160 (equivalent to IELTS Band 8.5)"
+    },
+    {
+      "name": "ACT Global Assessment Certificate (GAC)",
+      "certification_link": "https://drive.google.com/file/d/18SxhzzfmWhuQtx08GYofK5UNtayFeZV7/view",
+      "date": "2022-01",
+      "institution": {
+        "name": "American College Test, Inc. (ACT, Inc.)",
+        "site": "https://www.act.org/"
+      },
+      "description": ""
+    },
+    {
+      "name": "Sakura Science Exchange Program",
+      "certification_link": "https://drive.google.com/file/d/117jkEIUyec4Zd55-TIKb1-4TAda20MWA/view",
+      "date": "2019-10",
+      "institution": {
+        "name": "Japan Science and Technology Agency (JST)",
+        "site": "https://ssp.jst.go.jp/en"
+      },
+      "description": ""
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Fluent"
+    },
+    {
+      "name": "Indonesian",
+      "proficiency": "Native"
+    },
+    {
+      "name": "Javanese",
+      "proficiency": "Limited working proficiency"
+    }
+  ],
+  "references": [
+    {
+      "name": "Drs. Hari Suparwito, S.J., M.App.I.T.",
+      "institution": {
+        "name": "Faculty of Science and Technology, Universitas Sanata Dharma",
+        "site": "https://www.usd.ac.id/"
+      },
+      "position": "Professor/Lecturer",
+      "relationship": "Undergraduate Thesis Advisor",
+      "location": "Yogyakarta, Indonesia",
+      "personal_phone_number_obsfucated": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x31;&#x20;&#x32;&#x37;&#x30;&#x31;&#x34;&#x39;",
+      "company_phone_number_obsfucated": null,
+      "personal_whatsapp_number_obsfucated": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x31;&#x20;&#x32;&#x37;&#x30;&#x31;&#x34;&#x39;",
+      "email_address_obsfucated": "&#x73;&#x68;&#x69;&#x72;&#x73;&#x6a;&#x40;&#x6a;&#x65;&#x73;&#x75;&#x69;&#x74;&#x73;&#x2e;&#x6e;&#x65;&#x74;"
+    },
+    {
+      "name": "Yanuar Bestari Kumboro",
+      "institution": {
+        "name": "Division of Information Technology (IT), PT Kanisius",
+        "site": "https://kanisiusmedia.co.id/"
+      },
+      "position": "Head of Division",
+      "relationship": "Supervisor",
+      "location": "Yogyakarta, Indonesia",
+      "personal_phone_number_obsfucated": null,
+      "company_phone_number_obsfucated": "&plus;&#x36;&#x32;&#x20;&lpar;&#x30;&#x32;&#x37;&#x34;&rpar;&#x20;&#x35;&#x38;&#x38;&#x37;&#x38;&#x33;",
+      "personal_whatsapp_number_obsfucated": null,
+      "email_address_obsfucated": "&#x79;&#x61;&#x6e;&#x75;&#x61;&#x72;&#x40;&#x6b;&#x61;&#x6e;&#x69;&#x73;&#x69;&#x75;&#x73;&#x6d;&#x65;&#x64;&#x69;&#x61;&#x2e;&#x63;&#x6f;&#x2e;&#x69;&#x64;"
+    },
+    {
+      "name": "Drs. Johanes Eka Priyatma, M.Sc., Ph.D.",
+      "institution": {
+        "name": "Universitas Sanata Dharma",
+        "site": "https://www.usd.ac.id/"
+      },
+      "position": "Professor/Lecturer & Former University President (Rector)",
+      "relationship": "Academic Advisor",
+      "location": "Yogyakarta, Indonesia",
+      "personal_phone_number_obsfucated": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x33;&#x20;&#x32;&#x35;&#x36;&#x35;&#x20;&#x37;&#x30;&#x33;&#x37;",
+      "company_phone_number_obsfucated": null,
+      "personal_whatsapp_number_obsfucated": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x33;&#x20;&#x32;&#x35;&#x36;&#x35;&#x20;&#x37;&#x30;&#x33;&#x37;",
+      "email_address_obsfucated": "&#x65;&#x6b;&#x6f;&#x40;&#x75;&#x73;&#x64;&#x2e;&#x61;&#x63;&#x2e;&#x69;&#x64;"
+    },
+  ]
+}
