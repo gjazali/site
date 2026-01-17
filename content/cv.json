@@ -35,7 +35,7 @@
         },
         {
           "name": "English Club",
-          "description": "Established a club to help other learners in the academy on their English speaking skills. This includes organizing public speaking/presentation workshops and an online collaborative session with learners in the Apple Developer Academy at POSTECH in Pohang, South Korea",
+          "description": "Co-established a club to help other learners in the academy on their English speaking skills. This includes organizing public speaking/presentation workshops and an online collaborative session with learners in the Apple Developer Academy at POSTECH in Pohang, South Korea",
           "link": null
         }
       ]
@@ -107,7 +107,7 @@
       "position": "Co&ndash;Student Representative",
       "company": {
         "name": "Indonesian International Student Mobility Awards (IISMA)",
-        "site": null
+        "site": "https://kemdiktisaintek.go.id/"
       },
       "type": "Full-time",
       "start_date": "2023-4",
@@ -123,8 +123,8 @@
       "projects": [
         {
           "name": "BATIK Challenge",
-          "description": "Leading two groups in volunteering on two Bethesda Project homeless shelter sites."
-          "link": null,
+          "description": "Leading two groups in volunteering on two Bethesda Project homeless shelter sites.",
+          "link": "https://www.instagram.com/reel/CyKfnkhu41-/?igsh=dXpmbmJjZG1uYWR5"
         }
       ]
     }
@@ -141,7 +141,7 @@
       "degree": "Bachelor's Degree in Computer Science/Informatics (S.Kom.)",
       "grades": {
         "name": "CGPA",
-        "value": 3.92/4.00 (Magna cumlaude)"
+        "value": "3.92/4.00 (Magna cumlaude)"
       },
       "relevant_courses": [
         "NETW108: Network Performance Measurement and Analysis",
@@ -191,7 +191,7 @@
         "value": "86.07%"
       },
       "relevant_courses": [],
-      "description": "I graduated from the <a href="https://global.act.org/content/global/en/global-programs/global-assessment-certificate-programs.html">Global Assessment Certificate Program (GAC)</a>, which was administered by American College Test, Inc. (ACT, Inc.). Its curriculum—an international, English-language one—was undertaken alongside the national Indonesian high school curriculum. During my time in high school, I also participated in a geological scientific research collaboration in Japan with students of Ritsumeikan Keisho Senior High School and Kaisei Senior High School."
+      "description": "I graduated from the <a href='https://global.act.org/content/global/en/global-programs/global-assessment-certificate-programs.html'>Global Assessment Certificate Program (GAC)</a>, which was administered by American College Test, Inc. (ACT, Inc.). Its curriculum—an international, English-language one—was undertaken alongside the national Indonesian high school curriculum. During my time in high school, I also participated in a geological scientific research collaboration in Japan with students of Ritsumeikan Keisho Senior High School and Kaisei Senior High School."
     }
   ],
   "skills": [
@@ -396,10 +396,8 @@
       "position": "Professor/Lecturer",
       "relationship": "Undergraduate Thesis Advisor",
       "location": "Yogyakarta, Indonesia",
-      "personal_phone_number_obsfucated": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x31;&#x20;&#x32;&#x37;&#x30;&#x31;&#x34;&#x39;",
-      "company_phone_number_obsfucated": null,
-      "personal_whatsapp_number_obsfucated": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x31;&#x20;&#x32;&#x37;&#x30;&#x31;&#x34;&#x39;",
-      "email_address_obsfucated": "&#x73;&#x68;&#x69;&#x72;&#x73;&#x6a;&#x40;&#x6a;&#x65;&#x73;&#x75;&#x69;&#x74;&#x73;&#x2e;&#x6e;&#x65;&#x74;"
+      "phone_number": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x31;&#x20;&#x32;&#x37;&#x30;&#x31;&#x34;&#x39;",
+      "email_address": "&#x73;&#x68;&#x69;&#x72;&#x73;&#x6a;&#x40;&#x6a;&#x65;&#x73;&#x75;&#x69;&#x74;&#x73;&#x2e;&#x6e;&#x65;&#x74;"
     },
     {
       "name": "Yanuar Bestari Kumboro",
@@ -410,10 +408,8 @@
       "position": "Head of Division",
       "relationship": "Supervisor",
       "location": "Yogyakarta, Indonesia",
-      "personal_phone_number_obsfucated": null,
-      "company_phone_number_obsfucated": "&plus;&#x36;&#x32;&#x20;&lpar;&#x30;&#x32;&#x37;&#x34;&rpar;&#x20;&#x35;&#x38;&#x38;&#x37;&#x38;&#x33;",
-      "personal_whatsapp_number_obsfucated": null,
-      "email_address_obsfucated": "&#x79;&#x61;&#x6e;&#x75;&#x61;&#x72;&#x40;&#x6b;&#x61;&#x6e;&#x69;&#x73;&#x69;&#x75;&#x73;&#x6d;&#x65;&#x64;&#x69;&#x61;&#x2e;&#x63;&#x6f;&#x2e;&#x69;&#x64;"
+      "phone_number": "&plus;&#x36;&#x32;&#x20;&lpar;&#x30;&#x32;&#x37;&#x34;&rpar;&#x20;&#x35;&#x38;&#x38;&#x37;&#x38;&#x33;",
+      "email_address": "&#x79;&#x61;&#x6e;&#x75;&#x61;&#x72;&#x40;&#x6b;&#x61;&#x6e;&#x69;&#x73;&#x69;&#x75;&#x73;&#x6d;&#x65;&#x64;&#x69;&#x61;&#x2e;&#x63;&#x6f;&#x2e;&#x69;&#x64;"
     },
     {
       "name": "Drs. Johanes Eka Priyatma, M.Sc., Ph.D.",
@@ -424,10 +420,8 @@
       "position": "Professor/Lecturer & Former University President (Rector)",
       "relationship": "Academic Advisor",
       "location": "Yogyakarta, Indonesia",
-      "personal_phone_number_obsfucated": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x33;&#x20;&#x32;&#x35;&#x36;&#x35;&#x20;&#x37;&#x30;&#x33;&#x37;",
-      "company_phone_number_obsfucated": null,
-      "personal_whatsapp_number_obsfucated": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x33;&#x20;&#x32;&#x35;&#x36;&#x35;&#x20;&#x37;&#x30;&#x33;&#x37;",
-      "email_address_obsfucated": "&#x65;&#x6b;&#x6f;&#x40;&#x75;&#x73;&#x64;&#x2e;&#x61;&#x63;&#x2e;&#x69;&#x64;"
-    },
+      "phone_number": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x33;&#x20;&#x32;&#x35;&#x36;&#x35;&#x20;&#x37;&#x30;&#x33;&#x37;",
+      "email_address": "&#x65;&#x6b;&#x6f;&#x40;&#x75;&#x73;&#x64;&#x2e;&#x61;&#x63;&#x2e;&#x69;&#x64;"
+    }
   ]
 }

@@ -17,6 +17,27 @@ export function parseTimestamp(input) {
   return result;
 }
 
+export function parseYearMonth(input, locale = "en-US") {
+  if (input == null) return null;
+
+  const [year, month] = input.split("-").map(Number);
+
+  if (!year || !month || month < 1 || month > 12) {
+    throw new Error("Invalid format. Expected YYYY-MM.");
+  }
+
+  const date = new Date(year, month - 1);
+
+  return date.toLocaleDateString(locale, {
+    year: "numeric",
+    month: "long",
+  });
+}
+
+export function processPotentialNull(data, replacement) {
+  return (data == null) ? replacement : data;
+}
+
 export function parseMetadataDir(metadataDirPath) {
   let metadataList = [];
 

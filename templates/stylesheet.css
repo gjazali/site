@@ -231,6 +231,7 @@ html {
   font-family: var(--font-family-sans-serif);
   line-height: 1.5;
   font-size: 16;
+  scroll-padding-top: calc(var(--navbar-height) + var(--spacing-medium));
 }
 
 body {
@@ -324,6 +325,41 @@ footer {
   }
 }
 
+.c-card-ul {
+  margin: 0;
+}
+
+.c-card-list-container {
+  margin: 0;
+  &:not(:last-child)  {
+    margin-bottom: var(--spacing-huge);
+  }
+}
+
+.c-cv-item-title {
+  margin: 0;
+  &:not(:last-child)  {
+    margin-bottom: var(--spacing-huge);
+  }
+}
+
+.c-cv-item-title .c-card-title-3 {
+  margin-bottom: 0;
+}
+
+.c-cv-item-subtitle {
+  font-size: 14;
+  font-style: italic;
+  margin: 0;
+  &:not(:last-child)  {
+    margin-bottom: var(--spacing-huge);
+  }
+}
+
+.c-cv-item-subtitle p {
+  margin-bottom: var(--spacing-ultrasmall);
+}
+
 .c-e-content-box-post-list {
   display: flex;
   flex-direction: column;
@@ -359,7 +395,7 @@ footer {
   gap: var(--spacing-ultraenormous);
 }
 
-#blog-post-list-card-container, #portfolio-post-list-card-container {
+#blog-post-list-card-container, #portfolio-post-list-card-container, #cv-card-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -367,17 +403,12 @@ footer {
   gap: var(--spacing-large);
 }
 
-#blog-post-list-card-container .c-card, #portfolio-post-list-card-container .c-card {
+#cv-card-container {
+  flex-direction: column;
+}
+
+#blog-post-list-card-container .c-card, #portfolio-post-list-card-container .c-card, #cv-card-container .c-card {
   margin-bottom: 0;
-}
-
-#blog-post-list-description, #portfolio-post-list-description, #blog-post-list-rss {
-  width: 100%;
-}
-
-#blog-post-list-rss-button {
-  width: 100%;
-  margin-bottom: var(--spacing-extrasmall);
 }
 
 .c-post-navigation-container {
@@ -550,10 +581,23 @@ body:has(footer) {
   padding: var(--spacing-small) var(--spacing-large) var(--spacing-small) var(--spacing-large);
   border: none;
   box-sizing: border-box;
+  width: 100%;
 
   margin: 0;
   &:not(:last-child)  {
     margin-bottom: var(--spacing-medium);
+  }
+}
+
+.c-card .c-button {
+  &:last-child  {
+    margin-bottom: var(--spacing-extrasmall);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-card .c-button {
+    width: 100%;
   }
 }
 

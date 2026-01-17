@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>G.A. Jazali's CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../stylesheet.css">
+  </head>
+
+  <body>
+    {{ COMPONENT_NAVBAR }}
+    <div class="c-content-area">
+      <h1>Curriculum Vitae (CV)</h1>
+      <div id="cv-card-container">
+        <div class="c-card" id="cv-description">
+          <p>You can also download the more concise version of my CV as a PDF document.</p>
+          <a class="c-button-link c-button c-e-button-main" href="https://static.jazali.net/documents/cv.pdf">Download PDF</a>
+        </div>
+        <div class="c-card" id="cv-toc">
+          <b>Table of Contents</b>
+          <ul class="c-card-ul">
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#honors-and-awards">Honors & Awards</a></li>
+            <li><a href="#volunteer-experience">Volunteer Experience</a></li>
+            <li><a href="#licenses-and-certifications">Licenses & Certifications</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#references">References</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="c-content-box" id="experience">
+        <h2>Experience</h2>
+        <div>
+          {{ CV_EXPERIENCE }}
+        </div>
+      </div>
+      <div class="c-content-box" id="education">
+        <h2>Education</h2>
+        <div>
+          {{ CV_EDUCATION }}
+        </div>
+      </div>
+      <div class="c-content-box" id="skills">
+        <h2>Skills</h2>
+        <div>
+          {{ CV_SKILLS }}
+        </div>
+      </div>
+      <div class="c-content-box" id="honors-and-awards">
+        <h2>Honors & Awards</h2>
+        <div>
+          {{ CV_HONORS_AND_AWARDS }}
+        </div>
+      </div>
+      <div class="c-content-box" id="volunteer-experience">
+        <h2>Volunteer Experience</h2>
+        <div>
+          {{ CV_VOLUNTEER_EXPERIENCE }}
+        </div>
+      </div>
+      <div class="c-content-box" id="licenses-and-certifications">
+        <h2>Licenses & Certification</h2>
+        <div>
+          {{ CV_LICENSES_AND_CERTIFICATIONS }}
+        </div>
+      </div>
+      <div class="c-content-box" id="languages">
+        <h2>Languages</h2>
+        <div>
+          {{ CV_LANGUAGES }}
+        </div>
+      </div>
+      <div class="c-content-box" id="references">
+        <h2>References</h2>
+        <div>
+          {{ CV_REFERENCES }}
+        </div>
+      </div>
+    </div>
+    {{ COMPONENT_FOOTER }}
+  </body>
+</html>

@@ -19,7 +19,7 @@ export const navbar = `
     <ul class="c-navbar-navigation">
       <li><a href="/">Home</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li><a href="https://static.jazali.net/documents/cv.pdf">CV</a></li>
+      <li><a href="/cv">CV</a></li>
       <li><a href="/portfolio">Portfolio</a></li>
       <li><a href="https://github.com/gjazali">GitHub</a></li>
       <li><a href="/contact">Contact</a></li>
@@ -63,4 +63,141 @@ export const rssItemTemplate = `
 
 export const rssItemCategoryTemplate = `
   <category>{{ RSS_ITEM_CATEGORY }}</category>
+`;
+
+export const cvItemExperienceTemplate = `
+  <div class="c-card">
+    <div class="c-cv-item-title">
+      <h3 class="c-card-title-3">{{ CV_EXPERIENCE_POSITION }}</h3>
+      <p><a href="{{ CV_EXPERIENCE_COMPANY_SITE }}">{{ CV_EXPERIENCE_COMPANY_NAME }}</a></p>
+    </div>
+    <div class="c-cv-item-subtitle">
+      <p>{{ CV_EXPERIENCE_TYPE }}</p>
+      <p>{{ CV_EXPERIENCE_DATE_START }}&ndash;{{ CV_EXPERIENCE_DATE_END }}</p>
+      <p>{{ CV_EXPERIENCE_LOCATION }}</p>
+    </div>
+    <p>{{ CV_EXPERIENCE_DESCRIPTION }}</p>
+    {{ CV_EXPERIENCE_RESPONSIBILITIES }}
+    {{ CV_EXPERIENCE_PROJECTS }}
+  </div>
+`;
+
+export const cvItemExperienceResponsibilitiesTemplate = `
+  <div class="c-card-list-container">
+    <b>Responsibilities:</b>
+    <ul class="c-card-ul">
+      {{ CV_EXPERIENCE_RESPONSIBILITY_ITEMS }}
+    </ul>
+  </div>
+`;
+
+export const cvItemExperienceResponsibilityItemTemplate = `
+  <li>
+    <p>{{ CV_EXPERIENCE_RESPONSIBILITY_ITEM_NAME }}: {{ CV_EXPERIENCE_RESPONSIBILITY_ITEM_DESCRIPTION }}</p>
+  </li>
+`;
+
+export const cvItemExperienceProjectsTemplate = `
+  <div class="c-card-list-container">
+    <b>Projects:</b>
+    <ul class="c-card-ul">
+      {{ CV_EXPERIENCE_PROJECT_ITEMS }}
+    </ul>
+  </div>
+`;
+
+export const cvItemExperienceProjectItemTemplate = `
+  <li>
+    <p><a href="{{ CV_EXPERIENCE_PROJECT_ITEM_LINK }}">{{ CV_EXPERIENCE_PROJECT_ITEM_NAME }}</a>: {{ CV_EXPERIENCE_PROJECT_ITEM_DESCRIPTION }}</p>
+  </li>
+`;
+
+export const cvItemEducationTemplate = `
+  <div class="c-card">
+    <div class="c-cv-item-title">
+      <h3 class="c-card-title-3"><a href="{{ CV_EDUCATION_INSTITUTION_SITE }}">{{ CV_EDUCATION_INSTITUTION_NAME }}</a></h3>
+    </div>
+    <div class="c-cv-item-subtitle">
+      <p>{{ CV_EDUCATION_DEGREE }}</p>
+      <p>{{ CV_EDUCATION_DATE_START }}&ndash;{{ CV_EDUCATION_DATE_END }}</p>
+      <p>{{ CV_EDUCATION_LOCATION }}</p>
+    </div>
+    <p><b>{{ CV_EDUCATION_GRADES_NAME }}:</b> {{ CV_EDUCATION_GRADES_VALUE }}</p>
+    <p>{{ CV_EDUCATION_RELEVANT_COURSES }}</p>
+    <p>{{ CV_EDUCATION_DESCRIPTION }}</p>
+  </div>
+`;
+
+export const cvItemSkillsTemplate = `
+  <div class="c-card">
+    <div class="c-cv-item-title">
+      <h3 class="c-card-title-3">{{ CV_SKILLS_NAME }}</h3>
+    </div>
+    <p>{{ CV_SKILLS_LIST }}</p>
+  </div>
+`;
+
+export const cvItemHonorsAndAwardsTemplate = `
+  <div class="c-card">
+    <div class="c-cv-item-title">
+      <h3 class="c-card-title-3">{{ CV_HONORS_AND_AWARDS_NAME }}</h3>
+      <p><a href="{{ CV_HONORS_AND_AWARDS_INSTITUTION_SITE }}">{{ CV_HONORS_AND_AWARDS_INSTITUTION_NAME }}</a></p>
+    </div>
+    <div class="c-cv-item-subtitle">
+      <p>{{ CV_HONORS_AND_AWARDS_DATE }}</p>
+    </div>
+    <p>{{ CV_HONORS_AND_AWARDS_DESCRIPTION }}</p>
+  </div>
+`;
+
+export const cvItemVolunteerExperienceTemplate = `
+  <div class="c-card">
+    <div class="c-cv-item-title">
+      <h3 class="c-card-title-3">{{ CV_VOLUNTEER_EXPERIENCE_POSITION }}</h3>
+      <p><a href="{{ CV_VOLUNTEER_EXPERIENCE_INSTITUTION_SITE }}">{{ CV_VOLUNTEER_EXPERIENCE_INSTITUTION_NAME }}</a></p>
+    </div>
+    <div class="c-cv-item-subtitle">
+      <p>{{ CV_VOLUNTEER_EXPERIENCE_DATE }}</p>
+    </div>
+    <p>{{ CV_VOLUNTEER_EXPERIENCE_DESCRIPTION }}</p>
+  </div>
+`;
+
+export const cvItemLicensesAndCertificationsTemplate = `
+  <div class="c-card">
+    <div class="c-cv-item-title">
+      <h3 class="c-card-title-3">{{ CV_CERTIFICATION_NAME }}</h3>
+      <p><a href="{{ CV_CERTIFICATION_INSTITUTION_SITE }}">{{ CV_CERTIFICATION_INSTITUTION_NAME }}</a></p>
+    </div>
+    <div class="c-cv-item-subtitle">
+      <p>{{ CV_CERTIFICATION_DATE }}</p>
+    </div>
+    <p>{{ CV_CERTIFICATION_DESCRIPTION }}</p>
+    <a class="c-button-link c-button" href="{{ CV_CERTIFICATION_LINK }}">View Certificate</a>
+  </div>
+`;
+
+export const cvItemLanguagesTemplate = `
+  <div class="c-card">
+    <div class="c-cv-item-title">
+      <h3 class="c-card-title-3">{{ CV_LANGUAGES_NAME }}</h3>
+    </div>
+    <p><b>Proficiency:</b> {{ CV_LANGUAGES_PROFICIENCY }}</p>
+  </div>
+`;
+
+export const cvItemReferencesTemplate = `
+  <div class="c-card">
+    <div class="c-cv-item-title">
+      <h3 class="c-card-title-3">{{ CV_REFERENCES_NAME }}</h3>
+      <p><a href="{{ CV_REFERENCES_INSTITUTION_SITE }}">{{ CV_REFERENCES_INSTITUTION_NAME }}</a></p>
+    </div>
+    <div class="c-cv-item-subtitle">
+      <p>{{ CV_REFERENCES_POSITION }}</p>
+      <p>{{ CV_REFERENCES_LOCATION }}</p>
+    </div>
+    <p><b>Relationship:</b> {{ CV_REFERENCES_RELATIONSHIP }}</p>
+    <p>{{ CV_REFERENCES_PHONE_NUMBER }}</p>
+    <p>{{ CV_REFERENCES_EMAIL_ADDRESS }}</p>
+  </div>
 `;

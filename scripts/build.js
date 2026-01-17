@@ -1,5 +1,6 @@
 import { generateCSS } from "./generate_css.js";
 import { generateGenericPage } from "./generate_generic_page.js";
+import { generateCV } from "./generate_cv.js";
 import { generatePosts } from "./generate_posts.js";
 import { generatePostList } from "./generate_post_list.js";
 import { generateRSS } from "./generate_rss.js";
@@ -12,6 +13,9 @@ await generateGenericPage("templates/404.html", "public", "404");
 
 console.log(`Generating main page...`);
 await generateGenericPage("templates/main_page.html", "public", "index");
+
+console.log(`Generating CV page...`);
+await generateCV("templates/cv.html", "content/cv.json", "public/cv", "index");
 
 console.log(`Generating contact page...`);
 await generateGenericPage("templates/contact_page.html", "public/contact", "index");
