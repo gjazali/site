@@ -483,6 +483,10 @@ footer {
   margin: 0px;
 }
 
+.c-navbar-navigation-external-link svg {
+  height: 14;
+}
+
 @media screen and (max-width: 600px) {
   .c-navbar {
     display: block;
