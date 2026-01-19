@@ -642,13 +642,6 @@ body:has(footer) {
 
 .c-text-image {
   pointer-events: none;
-}
-
-.c-text-image-letters {
-  height: 12.3;
-}
-
-.c-text-image-number {
   height: 9.3;
 }
 
@@ -720,7 +713,7 @@ body:has(footer) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--spacing-small);
+  gap: var(--spacing-medium);
 }
 
 .about-me-details-individual-container img {

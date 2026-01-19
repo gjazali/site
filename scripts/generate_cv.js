@@ -165,8 +165,10 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
       .replace("{{ CV_REFERENCES_POSITION }}", x.position)
       .replace("{{ CV_REFERENCES_RELATIONSHIP }}", x.relationship)
       .replace("{{ CV_REFERENCES_LOCATION }}", x.location)
-      .replace("{{ CV_REFERENCES_PHONE_NUMBER }}", x.phone_number == null ? "" : `<b>Phone:</b> ${x.phone_number}`)
-      .replace("{{ CV_REFERENCES_EMAIL_ADDRESS }}", x.phone_number == null ? "" : `<b>Email:</b> ${x.email_address}`)
+      .replace("{{ CV_REFERENCES_PHONE_NUMBER_DARK }}", `${x.phone_number}_dark`)
+      .replace("{{ CV_REFERENCES_PHONE_NUMBER_LIGHT }}", `${x.phone_number}_light`)
+      .replace("{{ CV_REFERENCES_EMAIL_ADDRESS_DARK }}", `${x.email_address}_dark`)
+      .replace("{{ CV_REFERENCES_EMAIL_ADDRESS_LIGHT }}", `${x.email_address}_light`);
     cvItemReferences.push(references);
   });
 

@@ -396,8 +396,8 @@
       "position": "Professor/Lecturer",
       "relationship": "Undergraduate Thesis Advisor",
       "location": "Yogyakarta, Indonesia",
-      "phone_number": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x31;&#x20;&#x32;&#x37;&#x30;&#x31;&#x34;&#x39;",
-      "email_address": "&#x73;&#x68;&#x69;&#x72;&#x73;&#x6a;&#x40;&#x6a;&#x65;&#x73;&#x75;&#x69;&#x74;&#x73;&#x2e;&#x6e;&#x65;&#x74;"
+      "phone_number": "references_phone_number_suparwito",
+      "email_address": "references_email_suparwito"
     },
     {
       "name": "Yanuar Bestari Kumboro",
@@ -408,8 +408,8 @@
       "position": "Head of Division",
       "relationship": "Supervisor",
       "location": "Yogyakarta, Indonesia",
-      "phone_number": "&plus;&#x36;&#x32;&#x20;&lpar;&#x30;&#x32;&#x37;&#x34;&rpar;&#x20;&#x35;&#x38;&#x38;&#x37;&#x38;&#x33;",
-      "email_address": "&#x79;&#x61;&#x6e;&#x75;&#x61;&#x72;&#x40;&#x6b;&#x61;&#x6e;&#x69;&#x73;&#x69;&#x75;&#x73;&#x6d;&#x65;&#x64;&#x69;&#x61;&#x2e;&#x63;&#x6f;&#x2e;&#x69;&#x64;"
+      "phone_number": "references_phone_number_kumboro",
+      "email_address": "references_email_kumboro"
     },
     {
       "name": "Drs. Johanes Eka Priyatma, M.Sc., Ph.D.",
@@ -420,8 +420,9 @@
       "position": "Professor/Lecturer & Former University President (Rector)",
       "relationship": "Academic Advisor",
       "location": "Yogyakarta, Indonesia",
-      "phone_number": "&#x2b;&#x36;&#x32;&#x20;&#x38;&#x31;&#x33;&#x20;&#x32;&#x35;&#x36;&#x35;&#x20;&#x37;&#x30;&#x33;&#x37;",
-      "email_address": "&#x65;&#x6b;&#x6f;&#x40;&#x75;&#x73;&#x64;&#x2e;&#x61;&#x63;&#x2e;&#x69;&#x64;"
+      "phone_number": "references_phone_number_priyatma",
+      "phone_number_css_height_class": "c-text-image-numbers",
+      "email_address": "references_email_priyatma"
     }
   ]
 }
