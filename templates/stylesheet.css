@@ -109,18 +109,18 @@
 
   /* Note that `color-mix` support is not yet universal, especially in older browsers */
   .c-card .c-button {
-    border: 1px solid color-mix(in srgb, var(--gray-light), var(--ice-medium) 35%);
-    background-color: color-mix(in srgb, var(--white-medium), var(--ice-medium) 35%);
+    border: 1px solid color-mix(in srgb, var(--gray-light), var(--ice-light) 35%);
+    background-color: color-mix(in srgb, var(--white-medium), var(--ice-light) 35%);
   }
 
   .c-button:hover {
-    border: 1px solid color-mix(in srgb, var(--ultramarine-medium-blend-gray-light), var(--ice-medium) 35%);
-    background-color: color-mix(in srgb, var(--ultramarine-medium-blend-white-medium), var(--ice-medium) 35%);
+    border: 1px solid color-mix(in srgb, var(--ultramarine-medium-blend-gray-light), var(--ice-light) 35%);
+    background-color: color-mix(in srgb, var(--ultramarine-medium-blend-white-medium), var(--ice-light) 35%);
     color: var(--black-dark);
   }
 
   .c-card {
-    background: var(--ice-medium);
+    background: var(--ice-light);
   }
 
   .c-navbar {
