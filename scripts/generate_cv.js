@@ -84,6 +84,7 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
       .replace("{{ CV_EXPERIENCE_DATE_START }}", parseYearMonth(x.start_date))
       .replace("{{ CV_EXPERIENCE_DATE_END }}", processPotentialNull(parseYearMonth(x.end_date), "Present"))
       .replace("{{ CV_EXPERIENCE_LOCATION }}", x.location)
+      .replace("{{ CV_EXPERIENCE_ARRANGEMENT }}", x.arrangement)
       .replace("{{ CV_EXPERIENCE_DESCRIPTION }}", processPotentialNull(x.description, ""))
       .replace("{{ CV_EXPERIENCE_RESPONSIBILITIES }}", cvItemExperienceResponsibilities)
       .replace("{{ CV_EXPERIENCE_PROJECTS }}", cvItemExperienceProjects);

@@ -10,7 +10,8 @@
       "start_date": "2025-02",
       "end_date": "2025-12",
       "location": "Surabaya, Indonesia",
-      "description": "The program supports a ten-month-long study at the Apple Developer Academy in Universitas Ciputra, Surabaya, Indonesia for the 2025 cohort.",
+      "arrangement": "On-site",
+      "description": "The program supports a ten-month-long internship at the Apple Developer Academy in Universitas Ciputra, Surabaya, Indonesia for the 2025 cohort.",
       "responsibilities": [],
       "projects": [
         {
@@ -35,7 +36,7 @@
         },
         {
           "name": "English Club",
-          "description": "Co-established a club to help other learners in the academy on their English speaking skills. This includes organizing public speaking/presentation workshops and an online collaborative session with learners in the Apple Developer Academy at POSTECH in Pohang, South Korea",
+          "description": "I co-established a club to help other learners in the academy on their English speaking skills. This includes organizing public speaking/presentation workshops and an online collaborative session with learners in the Apple Developer Academy at POSTECH in Pohang, South Korea.",
           "link": null
         }
       ]
@@ -50,6 +51,7 @@
       "start_date": "2024-08",
       "end-date": null,
       "location": "Yogyakarta, Indonesia",
+      "arrangement": "Hybrid",
       "description": null,
       "responsibilities": [
         {
@@ -69,6 +71,7 @@
       "start_date": "2024-08",
       "end_date": "2024-12",
       "location": "Yogyakarta, Indonesia",
+      "arrangement": "On-site",
       "description": null,
       "responsibilities": [
         {
@@ -88,6 +91,7 @@
       "start_date": "2024-07",
       "end_date": "2024-08",
       "location": "Yogyakarta, Indonesia",
+      "arrangement": "On-site",
       "description": null,
       "responsibilities": [
         {
@@ -113,6 +117,7 @@
       "start_date": "2023-4",
       "end_date": "2023-12",
       "location": "Philadelphia, PA, United States of America",
+      "arrangement": "On-site",
       "description": null,
       "responsibilities": [
         {

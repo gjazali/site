@@ -160,6 +160,10 @@
     background-color: var(--ultramarine-light) !important;
   }
 
+  .c-cv-item-subtitle {
+    color: rgb(from var(--black-dark) r g b / 50%);
+  }
+
   #about-me-profile-picture {
     border: 2px solid var(--gray-light);
   }
@@ -257,6 +261,10 @@
   .c-e-button-main:hover {
     border: 1px solid var(--blue-light) !important;
     background-color: var(--blue-light) !important;
+  }
+
+  .c-cv-item-subtitle {
+    color: rgb(from var(--white-dark) r g b / 50%);
   }
 
   #about-me-profile-picture {
@@ -391,8 +399,6 @@ footer {
 }
 
 .c-cv-item-subtitle {
-  font-size: 14;
-  font-style: italic;
   margin: 0;
   &:not(:last-child)  {
     margin-bottom: var(--spacing-huge);
@@ -400,7 +406,7 @@ footer {
 }
 
 .c-cv-item-subtitle p {
-  margin-bottom: var(--spacing-ultrasmall);
+  margin-bottom: 0;
 }
 
 .c-e-content-box-post-list {

@@ -79,12 +79,11 @@ export const cvItemExperienceTemplate = `
   <div class="c-card">
     <div class="c-cv-item-title">
       <h3 class="c-card-title-3">{{ CV_EXPERIENCE_POSITION }}</h3>
-      <p><a href="{{ CV_EXPERIENCE_COMPANY_SITE }}">{{ CV_EXPERIENCE_COMPANY_NAME }}</a></p>
+      <p><a href="{{ CV_EXPERIENCE_COMPANY_SITE }}">{{ CV_EXPERIENCE_COMPANY_NAME }}</a>&ensp;&middot;&ensp;{{ CV_EXPERIENCE_TYPE }}</p>
     </div>
     <div class="c-cv-item-subtitle">
-      <p>{{ CV_EXPERIENCE_TYPE }}</p>
       <p>{{ CV_EXPERIENCE_DATE_START }}&ndash;{{ CV_EXPERIENCE_DATE_END }}</p>
-      <p>{{ CV_EXPERIENCE_LOCATION }}</p>
+      <p>{{ CV_EXPERIENCE_LOCATION }}&ensp;&middot;&ensp;{{ CV_EXPERIENCE_ARRANGEMENT }}</p>
     </div>
     <p>{{ CV_EXPERIENCE_DESCRIPTION }}</p>
     {{ CV_EXPERIENCE_RESPONSIBILITIES }}
@@ -126,9 +125,9 @@ export const cvItemEducationTemplate = `
   <div class="c-card">
     <div class="c-cv-item-title">
       <h3 class="c-card-title-3"><a href="{{ CV_EDUCATION_INSTITUTION_SITE }}">{{ CV_EDUCATION_INSTITUTION_NAME }}</a></h3>
+      <p>{{ CV_EDUCATION_DEGREE }}</p>
     </div>
     <div class="c-cv-item-subtitle">
-      <p>{{ CV_EDUCATION_DEGREE }}</p>
       <p>{{ CV_EDUCATION_DATE_START }}&ndash;{{ CV_EDUCATION_DATE_END }}</p>
       <p>{{ CV_EDUCATION_LOCATION }}</p>
     </div>
@@ -200,10 +199,9 @@ export const cvItemReferencesTemplate = `
   <div class="c-card">
     <div class="c-cv-item-title">
       <h3 class="c-card-title-3">{{ CV_REFERENCES_NAME }}</h3>
-      <p><a href="{{ CV_REFERENCES_INSTITUTION_SITE }}">{{ CV_REFERENCES_INSTITUTION_NAME }}</a></p>
+      <p><a href="{{ CV_REFERENCES_INSTITUTION_SITE }}">{{ CV_REFERENCES_INSTITUTION_NAME }}</a>&ensp;&middot;&ensp;{{ CV_REFERENCES_POSITION }}</p>
     </div>
     <div class="c-cv-item-subtitle">
-      <p>{{ CV_REFERENCES_POSITION }}</p>
       <p>{{ CV_REFERENCES_LOCATION }}</p>
     </div>
     <p><b>Relationship:</b> {{ CV_REFERENCES_RELATIONSHIP }}</p>
