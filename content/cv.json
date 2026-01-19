@@ -276,6 +276,15 @@
     {
       "name": "DevOps & Version Control",
       "list": [
+        "Git",
+        "Docker",
+        "HashiCorp Vagrant",
+        "Kubernetes"
+      ]
+    },
+    {
+      "name": "Mathematical & Statistical Tools",
+      "list": [
         "Matplotlib",
         "Wolfram Mathematica",
         "MATLAB Statistics and Machine Learning Toolbox"
