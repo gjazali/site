@@ -456,6 +456,18 @@ footer {
   flex-direction: column;
 }
 
+#cv-button-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-small);
+}
+
+@media screen and (max-width: 600px) {
+  #cv-button-container {
+    flex-direction: column;
+  }
+}
+
 #blog-post-list-card-container .c-card, #portfolio-post-list-card-container .c-card, #cv-card-container .c-card {
   margin-bottom: 0;
 }
