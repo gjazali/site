@@ -1,6 +1,7 @@
 {
   "experience": [
     {
+      "id": "0",
       "position": "Tech Intern",
       "company": {
         "name": "Apple Developer Academy at Universitas Ciputra",
@@ -42,6 +43,7 @@
       ]
     },
     {
+      "id": "1",
       "position": "Consulting System Engineer",
       "company": {
         "name": "PT Kanisius",
@@ -62,6 +64,7 @@
       "projects": []
     },
     {
+      "id": "2",
       "position": "Teaching Assistant for <i>INFO109: Non-Linear Data Structures</i>",
       "company": {
         "name": "Universitas Sanata Dharma",
@@ -82,6 +85,7 @@
       "projects": []
     },
     {
+      "id": "3",
       "position": "Student IT Staff",
       "company": {
         "name": "Universitas Sanata Dharma",
@@ -108,6 +112,7 @@
       ]
     },
     {
+      "id": "4",
       "position": "Co&ndash;Student Representative",
       "company": {
         "name": "Indonesian International Student Mobility Awards (IISMA)",
@@ -136,6 +141,7 @@
   ],
   "education": [
     {
+      "id": "0",
       "institution": {
         "name": "Universitas Sanata Dharma",
         "site": "https://www.usd.ac.id/"
@@ -162,6 +168,7 @@
       "description": "I graduated early&mdash;the total length of my studies was 3.5 years out of the normal 4 years."
     },
     {
+      "id": "1",
       "institution": {
         "name": "University of Pennsylvania",
         "site": "https://www.upenn.edu/"
@@ -183,6 +190,7 @@
       "description": "I studied as a foreign undergraduate exchange student at Penn's College of Arts & Sciences under the International Guest Student Program (IGSP) during the Fall 2023 semester. My studies during this time were fully funded under the Indonesian International Student Mobility Awards (IISMA) scholarship scheme. During the course of the semester, I took two graduate-level (master's/doctoral) computer science courses as an undergraduate student."
     },
     {
+      "id": "2",
       "institution": {
         "name": "Budi Mulia Dua International High School",
         "site": "https://bmd.sch.id/"
@@ -201,6 +209,7 @@
   ],
   "skills": [
     {
+      "id": "0",
       "name": "Specialized Area",
       "list": [
         "iOS Development",
@@ -216,6 +225,7 @@
       ]
     },
     {
+      "id": "1",
       "name": "Programming Languages",
       "list": [
         "Python",
@@ -236,6 +246,7 @@
       ]
     },
     {
+      "id": "2",
       "name": "Markup Languages",
       "list": [
         "HTML",
@@ -245,6 +256,7 @@
       ]
     },
     {
+      "id": "3",
       "name": "Web Technologies & Infrastructures",
       "list": [
         "Laravel",
@@ -256,6 +268,7 @@
       ]
     },
     {
+      "id": "4",
       "name": "Database Systems",
       "list": [
         "MySQL",
@@ -266,6 +279,7 @@
       ]
     },
     {
+      "id": "5",
       "name": "Data Science & Machine Learning",
       "list": [
         "TensorFlow",
@@ -279,6 +293,7 @@
       ]
     },
     {
+      "id": "6",
       "name": "DevOps & Version Control",
       "list": [
         "Git",
@@ -288,6 +303,7 @@
       ]
     },
     {
+      "id": "7",
       "name": "Mathematical & Statistical Tools",
       "list": [
         "Matplotlib",
@@ -298,6 +314,7 @@
   ],
   "honors_and_awards": [
     {
+      "id": "0",
       "name": "IISMA 2023 Fully-Funded Scholarship to study at the University of Pennsylvania, USA",
       "institution": {
         "name": "Indonesian International Student Mobility Awards (IISMA), Indonesian Ministry of Education, Culture, Research, and Technology",
@@ -307,6 +324,7 @@
       "description": "This is a fully-funded scholarship to study at the University of Pennsylvania for one semester from the Indonesian Government's Indonesian International Student Mobility Awards (IISMA) program."
     },
     {
+      "id": "1",
       "name": "Indonesian National Science Olympiad (OSN) Biology at the Provincial Stage of the Special Region of Yogyakarta",
       "institution": {
         "name": "Pusat Prestasi Nasional (Puspresnas), Indonesian Ministry of Education, Culture, Research, and Technology",
@@ -318,6 +336,7 @@
   ],
   "volunteer_experience": [
     {
+      "id": "0",
       "position": "Student Volunteer",
       "institution": {
         "name": "Bethesda Project",
@@ -327,6 +346,7 @@
       "description": "I led two volunteering groups in two Bethesda Project–run homeless shelters in Philadelphia, PA, United States of America."
     },
     {
+      "id": "1",
       "position": "Student Tutor",
       "institution": {
         "name": "The Australian Consortium for 'In-Country' Indonesian Studies",
@@ -336,6 +356,7 @@
       "description": "I volunteered as a student tutor for Monash University students in learning Bahasa Indonesia through Lembaga Bahasa Sanata Dharma University's ILCIC (Indonesian Language and Culture Intensive Course) in collaboration with Monash University's Global Immersion Guarantee (GIG) program and ACICIS (Australian Consortium for `In-Country' Indonesian Studies)."
     },
     {
+      "id": "2",
       "position": "Student Tutor",
       "institution": {
         "name": "Society for Informatics Students, Universitas Sanata Dharma",
@@ -345,6 +366,7 @@
       "description": "In the Universitas Sanata Dharma Informatics major's Informatika Belajar program, I tutored newly-admitted students in familiarizing themselves with the basics of programming."
     },
     {
+      "id": "3",
       "position": "Student Volunteer",
       "institution": {
         "name": "Sekolah Luar Biasa/A Yaketunis",
@@ -356,6 +378,7 @@
   ],
   "licenses_and_certifications": [
     {
+      "id": "0",
       "name": "Duolingo English Test (DET) Certified English Proficiency",
       "certification_link": "https://certs.duolingo.com/f65a26f3ab35569fbe1f72854b48e452",
       "date": "2023-02",
@@ -366,6 +389,7 @@
       "description": "Score: 155/160 (equivalent to IELTS Band 8.5)"
     },
     {
+      "id": "1",
       "name": "ACT Global Assessment Certificate (GAC)",
       "certification_link": "https://static.jazali.net/certificates/gac.pdf",
       "date": "2022-01",
@@ -376,6 +400,7 @@
       "description": ""
     },
     {
+      "id": "2",
       "name": "Sakura Science Exchange Program",
       "certification_link": "https://static.jazali.net/certificates/ssep.pdf",
       "date": "2019-10",
@@ -388,20 +413,24 @@
   ],
   "languages": [
     {
+      "id": "0",
       "name": "English",
       "proficiency": "Fluent"
     },
     {
+      "id": "1",
       "name": "Indonesian",
       "proficiency": "Native"
     },
     {
+      "id": "2",
       "name": "Javanese",
       "proficiency": "Limited working proficiency"
     }
   ],
   "references": [
     {
+      "id": "0",
       "name": "Drs. Hari Suparwito, S.J., M.App.I.T.",
       "institution": {
         "name": "Faculty of Science and Technology, Universitas Sanata Dharma",
@@ -414,6 +443,7 @@
       "email_address": "references_email_suparwito"
     },
     {
+      "id": "1",
       "name": "Yanuar Bestari Kumboro",
       "institution": {
         "name": "Division of Information Technology (IT), PT Kanisius",
@@ -426,6 +456,7 @@
       "email_address": "references_email_kumboro"
     },
     {
+      "id": "2",
       "name": "Drs. Johanes Eka Priyatma, M.Sc., Ph.D.",
       "institution": {
         "name": "Universitas Sanata Dharma",

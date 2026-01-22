@@ -77,6 +77,7 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
     }
 
     const experience = cvItemExperienceTemplate
+      .replace(/{{ CV_EXPERIENCE_ID }}/g, `experience-${x.id}`)
       .replace("{{ CV_EXPERIENCE_POSITION }}", x.position)
       .replace("{{ CV_EXPERIENCE_COMPANY_SITE }}", x.company.site)
       .replace("{{ CV_EXPERIENCE_COMPANY_NAME }}", x.company.name)
@@ -94,6 +95,7 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
   // Education
   metadata.education.forEach(function (x) {
     const education = cvItemEducationTemplate
+      .replace(/{{ CV_EDUCATION_ID }}/g, `education-${x.id}`)
       .replace("{{ CV_EDUCATION_INSTITUTION_SITE }}", x.institution.site)
       .replace("{{ CV_EDUCATION_INSTITUTION_NAME }}", x.institution.name)
       .replace("{{ CV_EDUCATION_DATE_START }}", parseYearMonth(x.start_date))
@@ -118,6 +120,7 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
   // Honors and Awards
   metadata.honors_and_awards.forEach(function (x) {
     const honorsAndAwards = cvItemHonorsAndAwardsTemplate
+      .replace(/{{ CV_HONORS_AND_AWARDS_ID }}/g, `honors-and-awards-${x.id}`)
       .replace("{{ CV_HONORS_AND_AWARDS_NAME }}", x.name)
       .replace("{{ CV_HONORS_AND_AWARDS_INSTITUTION_SITE }}", x.institution.site)
       .replace("{{ CV_HONORS_AND_AWARDS_INSTITUTION_NAME }}", x.institution.name)
@@ -129,6 +132,7 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
   // Volunteer Experience
   metadata.volunteer_experience.forEach(function (x) {
     const volunteerExperience = cvItemVolunteerExperienceTemplate
+      .replace(/{{ CV_VOLUNTEER_EXPERIENCE_ID }}/g, `volunteer-experience-${x.id}`)
       .replace("{{ CV_VOLUNTEER_EXPERIENCE_POSITION }}", x.position)
       .replace("{{ CV_VOLUNTEER_EXPERIENCE_INSTITUTION_SITE }}", x.institution.site)
       .replace("{{ CV_VOLUNTEER_EXPERIENCE_INSTITUTION_NAME }}", x.institution.name)

@@ -85,9 +85,18 @@ export const cvItemExperienceTemplate = `
       <p>{{ CV_EXPERIENCE_DATE_START }}&ndash;{{ CV_EXPERIENCE_DATE_END }}</p>
       <p>{{ CV_EXPERIENCE_LOCATION }}&ensp;&middot;&ensp;{{ CV_EXPERIENCE_ARRANGEMENT }}</p>
     </div>
-    <p>{{ CV_EXPERIENCE_DESCRIPTION }}</p>
-    {{ CV_EXPERIENCE_RESPONSIBILITIES }}
-    {{ CV_EXPERIENCE_PROJECTS }}
+    <div class="cv-ed">
+      <div class="cv-ed-toggle">
+        <input type="checkbox" id="cv-ed-dropdown-toggle-{{ CV_EXPERIENCE_ID }}" hidden>
+        <label for="cv-ed-dropdown-toggle-{{ CV_EXPERIENCE_ID }}" class="cv-ed-toggle-show-icon" aria-label="Show details"><p>&#9654;&ensp;Show Details</p></label>
+        <label for="cv-ed-dropdown-toggle-{{ CV_EXPERIENCE_ID }}" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
+      </div>
+      <div class="cv-ed-container">
+        <p>{{ CV_EXPERIENCE_DESCRIPTION }}</p>
+        {{ CV_EXPERIENCE_RESPONSIBILITIES }}
+        {{ CV_EXPERIENCE_PROJECTS }}
+      </div>
+    </div>
   </div>
 `;
 
@@ -132,8 +141,17 @@ export const cvItemEducationTemplate = `
       <p>{{ CV_EDUCATION_LOCATION }}</p>
     </div>
     <p><b>{{ CV_EDUCATION_GRADES_NAME }}:</b> {{ CV_EDUCATION_GRADES_VALUE }}</p>
-    <p>{{ CV_EDUCATION_RELEVANT_COURSES }}</p>
-    <p>{{ CV_EDUCATION_DESCRIPTION }}</p>
+    <div class="cv-ed">
+      <div class="cv-ed-toggle">
+        <input type="checkbox" id="cv-ed-dropdown-toggle-{{ CV_EDUCATION_ID }}" hidden>
+        <label for="cv-ed-dropdown-toggle-{{ CV_EDUCATION_ID }}" class="cv-ed-toggle-show-icon" aria-label="Show details"><p>&#9654;&ensp;Show Details</p></label>
+        <label for="cv-ed-dropdown-toggle-{{ CV_EDUCATION_ID }}" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
+      </div>
+      <div class="cv-ed-container">
+        <p>{{ CV_EDUCATION_RELEVANT_COURSES }}</p>
+        <p>{{ CV_EDUCATION_DESCRIPTION }}</p>
+      </div>
+    </div>
   </div>
 `;
 
@@ -155,7 +173,16 @@ export const cvItemHonorsAndAwardsTemplate = `
     <div class="c-cv-item-subtitle">
       <p>{{ CV_HONORS_AND_AWARDS_DATE }}</p>
     </div>
-    <p>{{ CV_HONORS_AND_AWARDS_DESCRIPTION }}</p>
+    <div class="cv-ed">
+      <div class="cv-ed-toggle">
+        <input type="checkbox" id="cv-ed-dropdown-toggle-{{ CV_HONORS_AND_AWARDS_ID }}" hidden>
+        <label for="cv-ed-dropdown-toggle-{{ CV_HONORS_AND_AWARDS_ID }}" class="cv-ed-toggle-show-icon" aria-label="Show details"><p>&#9654;&ensp;Show Details</p></label>
+        <label for="cv-ed-dropdown-toggle-{{ CV_HONORS_AND_AWARDS_ID }}" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
+      </div>
+      <div class="cv-ed-container">
+        <p>{{ CV_HONORS_AND_AWARDS_DESCRIPTION }}</p>
+      </div>
+    </div>
   </div>
 `;
 
@@ -168,7 +195,16 @@ export const cvItemVolunteerExperienceTemplate = `
     <div class="c-cv-item-subtitle">
       <p>{{ CV_VOLUNTEER_EXPERIENCE_DATE }}</p>
     </div>
-    <p>{{ CV_VOLUNTEER_EXPERIENCE_DESCRIPTION }}</p>
+    <div class="cv-ed">
+      <div class="cv-ed-toggle">
+        <input type="checkbox" id="cv-ed-dropdown-toggle-{{ CV_VOLUNTEER_EXPERIENCE_ID }}" hidden>
+        <label for="cv-ed-dropdown-toggle-{{ CV_VOLUNTEER_EXPERIENCE_ID }}" class="cv-ed-toggle-show-icon" aria-label="Show details"><p>&#9654;&ensp;Show Details</p></label>
+        <label for="cv-ed-dropdown-toggle-{{ CV_VOLUNTEER_EXPERIENCE_ID }}" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
+      </div>
+      <div class="cv-ed-container">
+        <p>{{ CV_VOLUNTEER_EXPERIENCE_DESCRIPTION }}</p>
+      </div>
+    </div>
   </div>
 `;
 
