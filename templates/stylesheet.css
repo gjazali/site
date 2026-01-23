@@ -409,50 +409,67 @@ footer {
   margin-bottom: 0;
 }
 
-.c-e-content-box-post-list {
+.c-content-details {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-small);
-  line-height: 1.3;
+  gap: var(--spacing-medium);
+}
 
-  margin: 0;
-  &:not(:last-child)  {
-    margin-bottom: var(--spacing-ultraenormous);
-  }
+.c-content-title {
+  font-weight: bold;
 }
 
 .c-content-subtitle {
-  font-size: 12;
-}
-
-.c-content-description {
   font-size: 14;
 }
 
 .c-content-tags {
-  font-size: 12;
+  font-size: 14;
   font-style: italic;
+}
+
+.c-content-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.c-content-description-and-tags {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.c-content-lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--spacing-extrahuge);
+}
+
+@media screen and (max-width: 600px) {
+  .c-content-lower {
+    flex-direction: column;
+  }
 }
 
 .c-text-footer {
   font-size: 12;
 }
 
-#blog-post-list, #portfolio-post-list {
+.c-post-list {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-ultraenormous);
 }
 
-#blog-post-list-card-container, #portfolio-post-list-card-container, #cv-card-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  gap: var(--spacing-large);
+@media screen and (max-width: 600px) {
+  .c-post-list-details a {
+    width: 100%;
+  }
 }
 
-#cv-card-container {
+#cv-details {
   flex-direction: column;
 }
 
@@ -460,6 +477,10 @@ footer {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-small);
+}
+
+#cv-toc {
+  margin-top: var(--spacing-ultraenormous);
 }
 
 @media screen and (max-width: 600px) {
@@ -500,10 +521,6 @@ footer {
 
 .cv-ed-toggle input[type="checkbox"] {
   appearance: none;
-}
-
-#blog-post-list-card-container .c-card, #portfolio-post-list-card-container .c-card, #cv-card-container .c-card {
-  margin-bottom: 0;
 }
 
 .c-post-navigation-container {

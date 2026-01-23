@@ -44,18 +44,27 @@ export const footer = `
 `;
 
 export const postItemTemplate = `
-  <div class="c-content-box c-e-content-box-post-list">
-    <div class="c-content-subtitle">
-      <p>{{ POST_CREATED }}&ensp;&middot;&ensp;{{ POST_AUTHOR }}</p>
-    </div>
-    <div class="c-content-title">
-      <p><a href="/{{ POST_PATH }}">{{ POST_TITLE }}</a></p>
-    </div>
-    <div class="c-content-description">
-      <p>{{ POST_DESCRIPTION }}</p>
-    </div>
-    <div class="c-content-tags">
-      <p><b>Category:</b> {{ POST_CATEGORY }}</p>
+  <div class="c-card c-e-card-post">
+    <div class="c-content-details">
+      <div class="c-content-subtitle">
+        <p>{{ POST_CREATED }}&ensp;&middot;&ensp;{{ POST_AUTHOR }}</p>
+      </div>
+      <div class="c-content-title">
+        <p>{{ POST_TITLE }}</p>
+      </div>
+      <div class="c-content-lower">
+        <div class="c-content-description-and-tags">
+          <div class="c-content-description">
+            <p>{{ POST_DESCRIPTION }}</p>
+          </div>
+          <div class="c-content-tags">
+            <p><b>Category:</b> {{ POST_CATEGORY }}</p>
+          </div>
+        </div>
+        <div class="c-content-button">
+          <a class="c-button-link c-button" href="/{{ POST_PATH }}">Read Post&ensp;&#9654;</a>
+        </div>
+      </div>
     </div>
   </div>
 `;
