@@ -66,7 +66,6 @@
   --spacing-ultraenormous: 28px;
 
   --navbar-height: 58px; /* This is measured manually to make sure that the site doesn't need JS to function */
-  --footer-height: 31px;
 }
 
 /* Mode specific settings */
@@ -607,7 +606,6 @@ footer {
     overflow: hidden;
     flex-direction: column;
     align-items: center;
-    transition: all 0.15s ease-in-out;
     padding: 0;
   }
 
@@ -627,7 +625,8 @@ footer {
   .c-navbar:has(.c-navbar-hamburger-toggle input[type="checkbox"]:checked) .c-navbar-navigation {
     margin-top: var(--spacing-large);
     margin-bottom: var(--spacing-large);
-    max-height: 1000px;
+    max-height: calc(100vh - 20px - var(--navbar-height));
+    overflow: auto;
   }
 
   .c-navbar:has(.c-navbar-hamburger-toggle input[type="checkbox"]:checked) .c-navbar-hamburger-toggle-icon {
