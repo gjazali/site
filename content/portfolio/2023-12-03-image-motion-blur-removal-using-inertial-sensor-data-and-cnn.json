@@ -3,7 +3,7 @@
   "title": "Image Motion Blur Removal using Inertial Sensor Data and CNN",
   "author": "G.A. Jazali",
   "created": "2023-12-03T18:00:00-0500",
-  "modified": "2026-01-16T01:00:00+0700",
+  "modified": "2026-01-29T05:00:00+0700",
   "reading_time": "00:03:00",
   "path": "2023-12-03-image-motion-blur-removal-using-inertial-sensor-data-and-cnn",
   "description": "Creating a tool that removes motion blur from photographs using motion sensor data and Convolutional Neural Network (CNN)",

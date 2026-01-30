@@ -7,7 +7,13 @@ import markdownItMathTemml from "markdown-it-math/temml";
 import { navbar, footer } from "./components.js";
 
 export async function generatePosts(inputDirPath, outputDirPath, templateFilePath, postListName, postListPath) {
-  const md = new MarkdownIt()
+  const md = new MarkdownIt(
+    {
+      html: true,
+      linkify: true,
+      typographer: true
+    }
+  )
     .use(MarkdownItFootnote)
     .use(markdownItMathTemml);
 
