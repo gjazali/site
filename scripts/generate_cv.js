@@ -32,6 +32,7 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
 
   fs.mkdirSync(outputDir, { recursive: true });
 
+  let cvItemAbout = metadata.about;
   let cvItemExperience = [];
   let cvItemEducation = [];
   let cvItemSkills = [];
@@ -180,6 +181,7 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
   const html = template
     .replace("{{ COMPONENT_NAVBAR }}", navbar)
     .replace("{{ COMPONENT_FOOTER }}", footer)
+    .replace("{{ CV_ABOUT }}", cvItemAbout)
     .replace("{{ CV_EXPERIENCE }}", cvItemExperience.join(""))
     .replace("{{ CV_EDUCATION }}", cvItemEducation.join(""))
     .replace("{{ CV_SKILLS }}", cvItemSkills.join(""))

@@ -1,7 +1,30 @@
 {
+  "about": "<p>I am a developer with a broad skill set, with experience leading small teams. I enjoy working across different layers of the stack, from low-level systems to user-facing applications, tackling complex problems. I also take pleasure in code optimization.</p><p>I am an alumni of the University of Pennsylvania's 2023 International Guest Student Program (Philadelphia, USA). I was also enrolled in an Apple Developer Academy for the 2025 cohort (Surabaya, Indonesia).</p><p>Outside of work, I am a tech hobbyist, running my own mail server and other self-hosted services for personal use; as well as learning new programming languages and software development tools in my spare time.</p>",
   "experience": [
     {
       "id": "0",
+      "position": "Software Engineer",
+      "company": {
+        "name": "Freelance",
+        "site": "https://jazali.org/"
+      },
+      "type": "Part-time",
+      "start_date": "2025-03",
+      "end_date": null,
+      "location": "Yogyakarta, Indonesia",
+      "arrangement": "Remote",
+      "description": null,
+      "responsibilities": [],
+      "projects": [
+        {
+          "name": "Yushu",
+          "description": "A language-learning iPadOS app aimed at helping children learn Mandarin through an interactive interface, which includes, among others, a story book feature and mini-games. This freelance project is done for <a href='https://www.linkedin.com/in/fenie-wijaya-5598b22b7'>Fenie Fedora Wijaya</a>, the concept designer, graphics designer, and owner of this project. It is currently in active development.",
+          "link": "/portfolio/yushu"
+        }
+      ]
+    },
+    {
+      "id": "1",
       "position": "Tech Intern",
       "company": {
         "name": "Apple Developer Academy at Universitas Ciputra",
@@ -23,17 +46,17 @@
         {
           "name": "BookIt",
           "description": "'BookIt' is an app tailor made for the employees of Ciputra Hospital Surabaya to reserve meeting rooms and company drivers, which are highly limited in numbers. The app’s driver booking feature utilizes a carpool system, where a smart algorithm decides how an employee can be fit into an existing booking based on multiple metrics.",
-          "link": null
+          "link": "/portfolio/bookit"
         },
         {
           "name": "TipsyBunny",
           "description": "'TipsyBunny' is a 3D multiplayer game built using Apple’s RealityKit and GameKit framework where you play as drunken bunnies and compete in throwing wine bottles at each other. I was the tech lead for this project.",
-          "link": null
+          "link": "/portfolio/tipsybunny"
         },
         {
           "name": "BirdBox",
           "description": "'BirdBox' is a 3D co-op augmented reality (AR) game built using Apple’s ARKit framework where each player attempts to best the other in a chicken fight.",
-          "link": null
+          "link": "/portfolio/birdbox"
         },
         {
           "name": "English Club",
@@ -43,7 +66,7 @@
       ]
     },
     {
-      "id": "1",
+      "id": "2",
       "position": "Consulting System Engineer",
       "company": {
         "name": "PT Kanisius",
@@ -64,7 +87,7 @@
       "projects": []
     },
     {
-      "id": "2",
+      "id": "3",
       "position": "Teaching Assistant for <i>INFO109: Non-Linear Data Structures</i>",
       "company": {
         "name": "Universitas Sanata Dharma",
@@ -85,7 +108,7 @@
       "projects": []
     },
     {
-      "id": "3",
+      "id": "4",
       "position": "Student IT Staff",
       "company": {
         "name": "Universitas Sanata Dharma",
@@ -112,7 +135,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": "5",
       "position": "Co&ndash;Student Representative",
       "company": {
         "name": "Indonesian International Student Mobility Awards (IISMA)",
@@ -216,6 +239,8 @@
         "Web Development",
         "Game Development",
         "Java Development",
+        "Object-Oriented Programming",
+        "Functional Programming",
         "Computer Vision & Computational Photography",
         "Network Security",
         "Cryptography",
@@ -264,18 +289,22 @@
         "React",
         "Cloudflare Pages",
         "Cloudflare Workers",
+        "AWS Lambda",
         "Oracle Cloud Infrastructure (OCI)"
       ]
     },
     {
       "id": "4",
-      "name": "Database Systems",
+      "name": "Database & Storage Systems",
       "list": [
+        "Redis",
+        "AWS DynamoDB (NoSQL)",
         "MySQL",
         "MariaDB",
         "SQLite",
         "Oracle Database",
-        "Cloudflare D1"
+        "Cloudflare D1 (SQLite)",
+        "Cloudflare R2 (AWS S3&ndash;compatible object storage)"
       ]
     },
     {
@@ -294,21 +323,39 @@
     },
     {
       "id": "6",
+      "name": "Mail Server Software & Tools",
+      "list": [
+        "Postfix",
+        "Dovecot",
+        "Spamassassin",
+        "ClamAV"
+      ]
+    },
+    {
+      "id": "7",
       "name": "DevOps & Version Control",
       "list": [
         "Git",
         "Docker",
         "HashiCorp Vagrant",
-        "Kubernetes"
+        "Kubernetes",
+        "Apple TestFlight"
       ]
     },
     {
-      "id": "7",
+      "id": "8",
       "name": "Mathematical & Statistical Tools",
       "list": [
         "Matplotlib",
         "Wolfram Mathematica",
         "MATLAB Statistics and Machine Learning Toolbox"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Debugging Tools",
+      "list": [
+        "gdb"
       ]
     }
   ],
