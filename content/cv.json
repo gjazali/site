@@ -3,6 +3,22 @@
   "experience": [
     {
       "id": "0",
+      "position": "Software Engineer Intern",
+      "company": {
+        "name": "Apple Developer Institute for AIML at Universitas Ciputra Surabaya",
+        "site": "https://developer.apple.com/academies/"
+      },
+      "type": "Internship",
+      "start_date": "2026-03",
+      "end_date": null,
+      "location": "Surabaya, Indonesia",
+      "arrangement": "On-site",
+      "description": "The program supports a year-long internship at the Apple Developer Institute for AIML in Universitas Ciputra, Surabaya, Indonesia for the 2026 cohort. This is a second-year program to the Apple Developer Academy.",
+      "responsibilities": [],
+      "projects": []
+    },
+    {
+      "id": "1",
       "position": "Software Engineer",
       "company": {
         "name": "Freelance",
@@ -11,7 +27,7 @@
       "type": "Part-time",
       "start_date": "2025-03",
       "end_date": null,
-      "location": "Yogyakarta, Indonesia",
+      "location": "Surabaya, Indonesia",
       "arrangement": "Remote",
       "description": null,
       "responsibilities": [],
@@ -24,10 +40,10 @@
       ]
     },
     {
-      "id": "1",
-      "position": "Tech Intern",
+      "id": "2",
+      "position": "Software Engineer Intern",
       "company": {
-        "name": "Apple Developer Academy at Universitas Ciputra",
+        "name": "Apple Developer Academy at Universitas Ciputra Surabaya",
         "site": "https://developer.apple.com/academies/"
       },
       "type": "Internship",
@@ -66,7 +82,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": "3",
       "position": "Consulting System Engineer",
       "company": {
         "name": "PT Kanisius",
@@ -87,8 +103,8 @@
       "projects": []
     },
     {
-      "id": "3",
-      "position": "Teaching Assistant for <i>INFO109: Non-Linear Data Structures</i>",
+      "id": "4",
+      "position": "Teaching Assistant",
       "company": {
         "name": "Universitas Sanata Dharma",
         "site": "https://www.usd.ac.id/"
@@ -102,13 +118,13 @@
       "responsibilities": [
         {
           "name": "Teaching",
-          "description": "Assisting in teaching the recitation sessions for the Fall 2024 class of INFO109: Non-Linear Data Structures."
+          "description": "Assisting in teaching the recitation sessions for the Fall 2024 class of <i>INFO109: Non-Linear Data Structures.</i>"
         }
       ],
       "projects": []
     },
     {
-      "id": "4",
+      "id": "5",
       "position": "Student IT Staff",
       "company": {
         "name": "Universitas Sanata Dharma",
@@ -131,33 +147,6 @@
           "name": "Thesis Document File Server",
           "description": "Establishing and maintaining an in-house shared file pool server for the archival of the Informatics department thesis documents.",
           "link": null
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "position": "Co&ndash;Student Representative",
-      "company": {
-        "name": "Indonesian International Student Mobility Awards (IISMA)",
-        "site": "https://kemdiktisaintek.go.id/"
-      },
-      "type": "Full-time",
-      "start_date": "2023-4",
-      "end_date": "2023-12",
-      "location": "Philadelphia, PA, United States of America",
-      "arrangement": "On-site",
-      "description": null,
-      "responsibilities": [
-        {
-          "name": "Leadership",
-          "description": "Assisting the Student Representative in their duties in leading 20 national scholarship awardees at the University of Pennsylvania in fulfilling the IISMA program."
-        }
-      ],
-      "projects": [
-        {
-          "name": "BATIK Challenge",
-          "description": "Leading two groups in volunteering on two Bethesda Project homeless shelter sites.",
-          "link": "https://www.instagram.com/reel/CyKfnkhu41-/?igsh=dXpmbmJjZG1uYWR5"
         }
       ]
     }
@@ -199,7 +188,7 @@
       "start_date": "2023-08",
       "end_date": "2023-12",
       "location": "Philadelphia, PA, United States of America",
-      "degree": "International Guest Student Program (IGSP), School of Arts & Sciences",
+      "degree": "International Guest Student Program (IGSP), focusing in Computer Science",
       "grades": {
         "name": "Grades Average",
         "value": "86.38%"
@@ -468,11 +457,6 @@
       "id": "1",
       "name": "Indonesian",
       "proficiency": "Native"
-    },
-    {
-      "id": "2",
-      "name": "Javanese",
-      "proficiency": "Limited working proficiency"
     }
   ],
   "references": [
