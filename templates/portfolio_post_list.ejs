@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>G.A. Jazali's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../stylesheet.css">
+  </head>
+
+  <body>
+    <%- navbar %>
+    <div class="c-content-area">
+      <h1>Portfolio</h1>
+      <div class="c-post-list">
+        <div class="c-post-list-details">
+          <p>Below is a list of the most notable projects I've worked on.</p>
+        </div>
+        <div>
+          <% metadataList.forEach(function(x) { %>
+            <div class="c-card c-e-card-post">
+              <div class="c-content-details">
+                <div class="c-content-subtitle">
+                  <p><%= parseTimestamp(x.created) %>&ensp;&middot;&ensp;<%= x.author %></p>
+                </div>
+                <div class="c-content-title">
+                  <p><%= x.title %></p>
+                </div>
+
+                <% if (x.description != null) { %>
+                  <div class="c-content-description">
+                    <p><%= x.description %></p>
+                  </div>
+                <% } %>
+
+                <div class="c-content-lower">
+                  <div class="c-content-tags">
+                    <% x.category.sort().forEach(function(y) { %>
+                      <div class="c-content-tag"><%= y %></div>
+                    <% }); %>
+                  </div>
+                  <div class="c-content-button">
+                    <% if (x.external_link != null) { %>
+                      <a class="c-button-link c-button" href="<%= x.external_link.link %>">
+                        <div class="c-button-icon-aligner">
+                          <%= x.external_link.name %>
+                          <svg class="c-button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                          </svg>
+                        </div>
+                      </a>
+                    <% } %>
+                    <a class="c-button-link c-button" href="/portfolio/<%= x.path %>">Read Post&ensp;&#9654;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+    <%- footer %>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import ejs from "ejs";
 import { parseTimestamp, minifyHTML } from "./utils.js";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
@@ -41,6 +42,8 @@ export async function generatePosts(inputDirPath, outputDirPath, templateFilePat
   fs.mkdirSync(outputDir, { recursive: true });
   const files = fs.readdirSync(inputDir);
 
+  const compiled = ejs.compile(template);
+
   for (const file of files) {
     if (!file.endsWith(".md")) continue;
 
@@ -60,18 +63,16 @@ export async function generatePosts(inputDirPath, outputDirPath, templateFilePat
     );
     const metadata = JSON.parse(metadataFile);
 
-    const html = template
-      .replace("{{ COMPONENT_NAVBAR }}", navbar)
-      .replace("{{ COMPONENT_FOOTER }}", footer)
-      .replace("{{ POST_CONTENT }}", rendered)
-      .replace("{{ POST_TITLE }}", metadata.title)
-      .replace("{{ POST_TITLE_FOR_NAVIGATION }}", metadata.title)
-      .replace("{{ POST_AUTHOR }}", metadata.author)
-      .replace("{{ POST_CREATED }}", parseTimestamp(metadata.created))
-      .replace("{{ POST_MODIFIED }}", parseTimestamp(metadata.modified))
-      .replace("{{ POST_CATEGORY }}", metadata.category.sort().join(", "))
-      .replace("{{ POST_LIST_NAME }}", postListName)
-      .replace("{{ POST_LIST_PATH }}", postListPath);
+    const data = {
+      navbar: navbar,
+      footer: footer,
+      data: metadata,
+      postListPath: postListPath,
+      parseTimestamp: parseTimestamp,
+      content: rendered,
+    }
+
+    const html = compiled(data)
 
     const outputPath = path.join(
       outputDir,

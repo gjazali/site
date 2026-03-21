@@ -1,0 +1,266 @@
+<html>
+  <head>
+    <title>G.A. Jazali's CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../stylesheet.css">
+  </head>
+
+  <body>
+    <%- navbar %>
+    <div class="c-content-area">
+      <h1>Curriculum Vitae (CV)</h1>
+      <div id="cv-details">
+        <p>You can also download the more concise version of my CV as a PDF document. This page contains most of the information listed on my <a href="https://www.linkedin.com/in/jazali/">LinkedIn page</a>. To see my projects, visit my <a href="/portfolio">portfolio page</a>.</p>
+        <div id="cv-button-container">
+          <a class="c-button-link c-button c-e-button-main" href="https://static.jazali.net/documents/cv.pdf">Download PDF</a>
+        </div>
+        <h2>Table of Contents</h2>
+        <ul class="c-card-ul">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#honors-and-awards">Honors & Awards</a></li>
+          <li><a href="#volunteer-experience">Volunteer Experience</a></li>
+          <li><a href="#licenses-and-certifications">Licenses & Certifications</a></li>
+          <li><a href="#languages">Languages</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </div>
+      <div class="c-content-box" id="about">
+        <h2>About Me</h2>
+        <div>
+          <%- data.about %>
+        </div>
+      </div>
+      <div class="c-content-box" id="experience">
+        <h2>Experience</h2>
+        <div>
+          <% data.experience.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><%= x.position %></h3>
+                <p><a href="<%= x.company.site %>"><%= x.company.name %></a>&ensp;&middot;&ensp;<%= x.type %></p>
+              </div>
+              <div class="c-cv-item-subtitle">
+                <p><%= parseYearMonth(x.start_date) %>&ndash;<%= x.end_date != null ? parseYearMonth(x.end_date) : "Present" %></p>
+                <p><%= x.location %>&ensp;&middot;&ensp;<%= x.arrangement %></p>
+              </div>
+              <div class="cv-ed">
+                <div class="cv-ed-toggle">
+                  <input type="checkbox" id="cv-ed-dropdown-toggle-experience-<%= x.id %>" hidden>
+                  <label for="cv-ed-dropdown-toggle-experience-<%= x.id %>" class="cv-ed-toggle-show-icon" aria-label="Show details"><p>&#9654;&ensp;Show Details</p></label>
+                  <label for="cv-ed-dropdown-toggle-experience-<%= x.id %>" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
+                </div>
+                <div class="cv-ed-container">
+                  <p><%- x.description %></p>
+                  <% if (x.responsibilities.length > 0) { %>
+                    <div class="c-card-list-container">
+                      <b>Responsibilities:</b>
+                      <ul class="c-card-ul">
+                        <% x.responsibilities.forEach(function (y) { %>
+                          <li><p><i><%= y.name %></i>: <%- y.description %></p></li>
+                        <% }); %>
+                      </ul>
+                    </div>
+                  <% } %>
+                  <% if (x.projects.length > 0) { %>
+                    <div class="c-card-list-container">
+                      <b>Projects:</b>
+                      <ul class="c-card-ul">
+                        <% x.projects.forEach(function (y) { %>
+                          <% if (y.link == null) { %>
+                            <li><p><i><%= y.name %></i>: <%- y.description %></p></li>
+                          <% } else { %>
+                            <li><p><i><a href="<%= y.link %>"><%= y.name %></a></i>: <%- y.description %></p></li>
+                          <% } %>
+                        <% }); %>
+                      </ul>
+                    </div>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="c-content-box" id="education">
+        <h2>Education</h2>
+        <div>
+          <% data.education.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><a href="<%= x.institution.site %>"><%= x.institution.name %></a></h3>
+                <p><%= x.degree %></p>
+              </div>
+              <div class="c-cv-item-subtitle">
+                <p><%= parseYearMonth(x.start_date) %>&ndash;<%= x.end_date != null ? parseYearMonth(x.end_date) : "Present" %></p>
+                <p><%= x.location %></p>
+              </div>
+              <p><b><%= x.grades.name %>:</b> <%= x.grades.value %></p>
+              <div class="cv-ed">
+                <div class="cv-ed-toggle">
+                  <input type="checkbox" id="cv-ed-dropdown-toggle-education-<%= x.id %>" hidden>
+                  <label for="cv-ed-dropdown-toggle-education-<%= x.id %>" class="cv-ed-toggle-show-icon" aria-label="Show details"><p>&#9654;&ensp;Show Details</p></label>
+                  <label for="cv-ed-dropdown-toggle-education-<%= x.id %>" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
+                </div>
+                <div class="cv-ed-container">
+                  <p><%- x.description %></p>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="c-content-box" id="skills">
+        <h2>Skills</h2>
+        <div>
+          <% data.skills.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><%= x.name %></h3>
+              </div>
+              <p><%= x.list.join(", ") %></p>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="c-content-box" id="honors-and-awards">
+        <h2>Honors & Awards</h2>
+        <div>
+          <% data.honors_and_awards.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><%= x.name %></h3>
+                <p><a href="<%= x.institution.site %>"><%= x.institution.name %></a></p>
+              </div>
+              <div class="c-cv-item-subtitle">
+                <p><%= parseYearMonth(x.date) %></p>
+              </div>
+              <div class="cv-ed">
+                <div class="cv-ed-toggle">
+                  <input type="checkbox" id="cv-ed-dropdown-toggle-honors-and-awards-<%= x.id %>" hidden>
+                  <label for="cv-ed-dropdown-toggle-honors-and-awards-<%= x.id %>" class="cv-ed-toggle-show-icon" aria-label="Show details"><p>&#9654;&ensp;Show Details</p></label>
+                  <label for="cv-ed-dropdown-toggle-honors-and-awards-<%= x.id %>" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
+                </div>
+                <div class="cv-ed-container">
+                  <p><%- x.description %></p>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="c-content-box" id="volunteer-experience">
+        <h2>Volunteer Experience</h2>
+        <div>
+          <% data.volunteer_experience.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><%= x.position %></h3>
+                <p><a href="<%= x.institution.site %>"><%= x.institution.name %></a></p>
+              </div>
+              <div class="c-cv-item-subtitle">
+                <p><%= parseYearMonth(x.date) %></p>
+              </div>
+              <div class="cv-ed">
+                <div class="cv-ed-toggle">
+                  <input type="checkbox" id="cv-ed-dropdown-toggle-volunteer-experience-<%= x.id %>" hidden>
+                  <label for="cv-ed-dropdown-toggle-volunteer-experience-<%= x.id %>" class="cv-ed-toggle-show-icon" aria-label="Show details"><p>&#9654;&ensp;Show Details</p></label>
+                  <label for="cv-ed-dropdown-toggle-volunteer-experience-<%= x.id %>" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
+                </div>
+                <div class="cv-ed-container">
+                  <p><%- x.description %></p>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="c-content-box" id="licenses-and-certifications">
+        <h2>Licenses & Certification</h2>
+        <div>
+          <% data.licenses_and_certifications.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><%= x.name %></h3>
+                <p><a href="<%= x.institution.site %>"><%= x.institution.name %></a></p>
+              </div>
+              <div class="c-cv-item-subtitle">
+                <p><%= parseYearMonth(x.date) %></p>
+              </div>
+              <p><%- x.description %></p>
+              <a class="c-button-link c-button" href="<%= x.certification_link %>">
+                <div class="c-button-icon-aligner">
+                  View Certificate
+                  <svg class="c-button-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="c-content-box" id="languages">
+        <h2>Languages</h2>
+        <div>
+          <% data.languages.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><%= x.name %></h3>
+              </div>
+              <p><b>Proficiency:</b> <%= x.proficiency %></p>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="c-content-box" id="references">
+        <h2>References</h2>
+        <div>
+          <% data.references.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><%= x.name %></h3>
+                <p><a href="<%= x.institution.site %>"><%= x.institution.name %></a>&ensp;&middot;&ensp;<%= x.position %></p>
+              </div>
+              <div class="c-cv-item-subtitle">
+                <p><%= x.location %></p>
+              </div>
+              <p><b>Relationship:</b> <%= x.relationship %></p>
+
+              <div class="contact-details-container">
+                <div class="about-me-details-individual-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                  </svg>
+                  <picture>
+                    <source srcset="../assets/texts/<%= x.phone_number.concat('_dark') %>.svg" media="(prefers-color-scheme: dark)">
+                    <source srcset="../assets/texts/<%= x.phone_number.concat('_light') %>.svg" media="(prefers-color-scheme: light)">
+                    <img class="c-text-image" alt="Main phone number" loading="lazy"/>
+                  </picture>
+                </div>
+
+                <div class="about-me-details-individual-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                  </svg>
+                  <picture>
+                    <source srcset="../assets/texts/<%= x.email_address.concat('_dark') %>.svg" media="(prefers-color-scheme: dark)">
+                    <source srcset="../assets/texts/<%= x.email_address.concat('_light') %>.svg" media="(prefers-color-scheme: light)">
+                    <img class="c-text-image" alt="Main email" loading="lazy"/>
+                  </picture>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+          <div class="c-text-footer">
+            <p>The contact information here were adjusted to prevent scraping. That's why they can't be copied.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- footer %>
+  </body>
+</html>

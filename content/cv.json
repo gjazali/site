@@ -35,7 +35,7 @@
         {
           "name": "Yushu",
           "description": "A language-learning iPadOS app aimed at helping children learn Mandarin through an interactive interface, which includes, among others, a story book feature and mini-games. This freelance project is done for <a href='https://www.linkedin.com/in/fenie-wijaya-5598b22b7'>Fenie Fedora Wijaya</a>, the concept designer, graphics designer, and owner of this project. It is currently in active development.",
-          "link": "/portfolio/yushu"
+          "link": null
         }
       ]
     },
@@ -62,17 +62,17 @@
         {
           "name": "BookIt",
           "description": "'BookIt' is an app tailor made for the employees of Ciputra Hospital Surabaya to reserve meeting rooms and company drivers, which are highly limited in numbers. The app’s driver booking feature utilizes a carpool system, where a smart algorithm decides how an employee can be fit into an existing booking based on multiple metrics.",
-          "link": "/portfolio/bookit"
+          "link": null
         },
         {
           "name": "TipsyBunny",
           "description": "'TipsyBunny' is a 3D multiplayer game built using Apple’s RealityKit and GameKit framework where you play as drunken bunnies and compete in throwing wine bottles at each other. I was the tech lead for this project.",
-          "link": "/portfolio/tipsybunny"
+          "link": null
         },
         {
           "name": "BirdBox",
           "description": "'BirdBox' is a 3D co-op augmented reality (AR) game built using Apple’s ARKit framework where each player attempts to best the other in a chicken fight.",
-          "link": "/portfolio/birdbox"
+          "link": null
         },
         {
           "name": "English Club",

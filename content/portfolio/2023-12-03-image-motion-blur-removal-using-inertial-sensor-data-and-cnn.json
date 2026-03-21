@@ -8,5 +8,9 @@
   "path": "2023-12-03-image-motion-blur-removal-using-inertial-sensor-data-and-cnn",
   "description": "Creating a tool that removes motion blur from photographs using motion sensor data and Convolutional Neural Network (CNN)",
   "category": ["Machine Learning", "Artificial Intelligence", "Convolutional Neural Network", "Computer Vision", "Computational Photography"],
-  "language": "en-us"
+  "language": "en-us",
+  "external_link": {
+    "name": "Repository",
+    "link": "https://github.com/gjazali/motion-deblurring"
+  }
 }

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import ejs from "ejs";
 import { navbar, footer } from "./components.js";
 import { minifyHTML } from "./utils.js";
 
@@ -16,9 +17,12 @@ export async function generateGenericPage(templateFilePath, outputDirPath, outpu
 
   fs.mkdirSync(outputDir, { recursive: true });
 
-  const html = template
-    .replace("{{ COMPONENT_NAVBAR }}", navbar)
-    .replace("{{ COMPONENT_FOOTER }}", footer);
+  const data = {
+    navbar: navbar,
+    footer: footer,
+  }
+
+  const html = ejs.render(template, data)
 
   const outputFilePath = path.join(
     outputDir,

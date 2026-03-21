@@ -140,6 +140,11 @@
     color: rgb(from var(--black-dark) r g b / 40%);
   }
 
+  .c-content-tag {
+    border: 1px solid rgb(from var(--black-dark) r g b / 7%);
+    background-color: rgb(from var(--black-dark) r g b / 6%);
+  }
+
   .c-text-footer {
     color: rgb(from var(--black-dark) r g b / 40%);
   }
@@ -240,6 +245,11 @@
 
   .c-content-tags {
     color: rgb(from var(--white-dark) r g b / 40%);
+  }
+
+  .c-content-tag {
+    border: 1px solid rgb(from var(--white-dark) r g b / 7%);
+    background-color: rgb(from var(--white-dark) r g b / 6%);
   }
 
   .c-text-footer {
@@ -451,27 +461,45 @@ footer {
   font-size: 14;
 }
 
-.c-content-tags {
-  font-size: 14;
-  font-style: italic;
-}
-
 .c-content-button {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
+  gap: var(--spacing-small);
 }
 
-.c-content-description-and-tags {
+@media screen and (max-width: 600px) {
+  .c-content-button {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.c-content-tags {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-medium);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-small);
+  font-size: 11;
+}
+
+.c-card .c-content-tags {
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-extrasmall);
+}
+
+.c-content-tag {
+  padding: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .c-content-lower {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
   gap: var(--spacing-extrahuge);
 }
 
@@ -685,6 +713,19 @@ body:has(.c-navbar) {
   height: 32px;
 }
 
+.c-button-icon-aligner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-small);
+  text-decoration: none;
+}
+
+.c-button-icon {
+  width: 14px;
+}
+
 .c-e-button-main, .c-e-button-main:hover {
   color: var(--white-light) !important;
 }
@@ -722,14 +763,16 @@ body:has(.c-navbar) {
 }
 
 .c-card .c-button {
-  &:last-child  {
-    margin-bottom: var(--spacing-extrasmall);
-  }
+  margin-bottom: var(--spacing-extrasmall);
 }
 
 @media screen and (max-width: 600px) {
   .c-card .c-button {
     width: 100%;
+
+    &:not(:last-child)  {
+      margin-bottom: 0;
+    }
   }
 }
 

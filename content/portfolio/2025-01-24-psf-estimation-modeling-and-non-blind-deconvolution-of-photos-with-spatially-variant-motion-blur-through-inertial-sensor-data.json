@@ -8,5 +8,9 @@
   "path": "2025-01-24-psf-estimation-modeling-and-non-blind-deconvolution-of-photos-with-spatially-variant-motion-blur-through-inertial-sensor-data",
   "description": "Developing an end-to-end pipeline that removes motion blur from photographs through modeling point spread functions (PSFs) and non-blind deconvolution",
   "category": ["Machine Learning", "Artificial Intelligence", "Non-Blind Deconvolution", "Computer Vision", "Computational Photography", "Image Processing", "Applied Mathematics"],
-  "language": "en-us"
+  "language": "en-us",
+  "external_link": {
+    "name": "Repository",
+    "link": "https://github.com/gjazali/psf-estimation-and-nbd"
+  }
 }

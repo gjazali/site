@@ -9,28 +9,28 @@ console.log(`Generating stylesheet...`);
 generateCSS("templates/stylesheet.css", "public", "stylesheet");
 
 console.log(`Generating 404 error page...`);
-await generateGenericPage("templates/404.html", "public", "404");
+await generateGenericPage("templates/404.ejs", "public", "404");
 
 console.log(`Generating main page...`);
-await generateGenericPage("templates/main_page.html", "public", "index");
+await generateGenericPage("templates/main_page.ejs", "public", "index");
 
 console.log(`Generating CV page...`);
-await generateCV("templates/cv.html", "content/cv.json", "public/cv", "index");
+await generateCV("templates/cv.ejs", "content/cv.json", "public/cv", "index");
 
 console.log(`Generating contact page...`);
-await generateGenericPage("templates/contact_page.html", "public/contact", "index");
+await generateGenericPage("templates/contact_page.ejs", "public/contact", "index");
 
 console.log(`Generating blog posts...`);
-await generatePosts("content/blog", "public/blog", "templates/post.html", "Blog", "blog");
+await generatePosts("content/blog", "public/blog", "templates/post.ejs", "Blog", "blog");
 
 console.log(`Generating blog post list...`);
-await generatePostList("content/blog", "public/blog", "templates/blog_post_list.html", "blog");
+await generatePostList("content/blog", "public/blog", "templates/blog_post_list.ejs");
 
 console.log(`Generating RSS feed...`);
-generateRSS("content/blog", "public/blog", "templates/rss.xml", "index.xml", "jazali.org", "blog");
+generateRSS("content/blog", "public/blog", "templates/rss.ejs", "index.xml", "jazali.org", "blog");
 
 console.log(`Generating portfolio posts...`);
-await generatePosts("content/portfolio", "public/portfolio", "templates/post.html", "Portfolio", "portfolio");
+await generatePosts("content/portfolio", "public/portfolio", "templates/post.ejs", "Portfolio", "portfolio");
 
 console.log(`Generating portfolio post list...`);
-await generatePostList("content/portfolio", "public/portfolio", "templates/portfolio_post_list.html", "portfolio");
+await generatePostList("content/portfolio", "public/portfolio", "templates/portfolio_post_list.ejs");

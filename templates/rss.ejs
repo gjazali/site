@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>G.A. Jazali's Blog</title>
+  <link>https://jazali.org</link>
+  <description>Posts about whatever I'm interested in.</description>
+    <% items.forEach(function(x) { %>
+      <item>
+        <title><%= x.title %></title>
+        <link><%= `https://${feedSourceDomain}/${feedSourceDir}/${x.path}.html` %></link>
+        <% if (x.description != null) { %>
+          <description><%= x.description %></description>
+        <% } %>
+        <pubDate><%= new Date(x.created).toUTCString() %></pubDate>
+        <language><%= x.language %></language>
+        <% x.category.sort().forEach(function(y) { %>
+          <category><%= y %></category>
+        <% }); %>
+      </item>
+    <% }); %>
+</channel>
+</rss>

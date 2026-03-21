@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>G.A. Jazali's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../stylesheet.css">
+  </head>
+
+  <body>
+    <%- navbar %>
+    <div class="c-content-area">
+      <h1>Blog</h1>
+      <div class="c-post-list">
+        <div class="c-post-list-details">
+          <p>If you're using an RSS feed reader, subscribe to this blog's RSS feed by using the URL below.</p>
+          <a class="c-button c-e-button-main c-button-link" href="/blog/index.xml">RSS Feed</a>
+        </div>
+        <div>
+          <% metadataList.forEach(function(x) { %>
+            <div class="c-card c-e-card-post">
+              <div class="c-content-details">
+                <div class="c-content-subtitle">
+                  <p><%= parseTimestamp(x.created) %>&ensp;&middot;&ensp;<%= x.author %></p>
+                </div>
+                <div class="c-content-title">
+                  <p><%= x.title %></p>
+                </div>
+
+                <% if (x.description != null) { %>
+                  <div class="c-content-description">
+                    <p><%= x.description %></p>
+                  </div>
+                <% } %>
+
+                <div class="c-content-lower">
+                  <div class="c-content-tags">
+                    <% x.category.sort().forEach(function(y) { %>
+                      <div class="c-content-tag"><%= y %></div>
+                    <% }); %>
+                  </div>
+                  <div class="c-content-button">
+                    <a class="c-button-link c-button" href="/blog/<%= x.path %>">Read Post&ensp;&#9654;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+    <%- footer %>
+  </body>
+</html>
