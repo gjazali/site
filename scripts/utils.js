@@ -17,7 +17,7 @@ export function parseTimestamp(input) {
   return result;
 }
 
-export function parseYearMonth(input, locale = "en-US") {
+export function parseYearMonth(input) {
   if (input == null) return null;
 
   const [year, month] = input.split("-").map(Number);
@@ -28,14 +28,83 @@ export function parseYearMonth(input, locale = "en-US") {
 
   const date = new Date(year, month - 1);
 
-  return date.toLocaleDateString(locale, {
-    year: "numeric",
-    month: "long",
-  });
+  return date;
 }
 
-export function processPotentialNull(data, replacement) {
-  return (data == null) ? replacement : data;
+export function getTimeDifference(startDate, endDate) {
+  const start = startDate < endDate ? startDate : endDate;
+  const end = startDate < endDate ? endDate : startDate;
+
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+  let days = end.getDate() - start.getDate();
+  let hours = end.getHours() - start.getHours();
+  let minutes = end.getMinutes() - start.getMinutes();
+  let seconds = end.getSeconds() - start.getSeconds();
+
+  if (seconds < 0) {
+    seconds += 60;
+    minutes--;
+  }
+
+  if (minutes < 0) {
+    minutes += 60;
+    hours--;
+  }
+
+  if (hours < 0) {
+    hours += 24;
+    days--;
+  }
+
+  if (days < 0) {
+    months--;
+    const previousMonthDays = new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+    days += previousMonthDays;
+  }
+
+  if (months < 0) {
+    months += 12;
+    years--;
+  }
+
+  return {
+    years,
+    months,
+    days,
+    hours,
+    minutes,
+    seconds,
+  };
+}
+
+export function formatTimeDifference(timeDifferenceObject) {
+  const parts = [];
+
+  const units = [
+    { key: "years", singular: "year" },
+    { key: "months", singular: "month" },
+    { key: "days", singular: "day" },
+    { key: "hours", singular: "hour" },
+    { key: "minutes", singular: "minute" },
+    { key: "seconds", singular: "second" }
+  ];
+
+  for (const { key, singular } of units) {
+    if (timeDifferenceObject[key] !== undefined && timeDifferenceObject[key] !== 0) {
+      const value = timeDifferenceObject[key];
+      const label = value === 1 ? singular : key;
+      parts.push(`${value} ${label}`);
+    }
+  }
+
+  if (parts.length === 0) {
+    return "0 time elapsed";
+  }
+
+  const formatter = new Intl.ListFormat("en", { style: "long", type: "conjunction" });
+
+  return formatter.format(parts);
 }
 
 export function parseMetadataDir(metadataDirPath) {

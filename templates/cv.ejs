@@ -43,7 +43,9 @@
                 <p><a href="<%= x.company.site %>"><%= x.company.name %></a>&ensp;&middot;&ensp;<%= x.type %></p>
               </div>
               <div class="c-cv-item-subtitle">
-                <p><%= parseYearMonth(x.start_date) %>&ndash;<%= x.end_date != null ? parseYearMonth(x.end_date) : "Present" %></p>
+                <p>
+                  <%= parseYearMonth(x.start_date).toLocaleDateString("en-US", { year: "numeric", month: "long" }) %>&ndash;<%= x.end_date != null ? parseYearMonth(x.end_date).toLocaleDateString("en-US", { year: "numeric", month: "long" }) : "Present" %>
+                </p>
                 <p><%= x.location %>&ensp;&middot;&ensp;<%= x.arrangement %></p>
               </div>
               <div class="cv-ed">
@@ -94,7 +96,7 @@
                 <p><%= x.degree %></p>
               </div>
               <div class="c-cv-item-subtitle">
-                <p><%= parseYearMonth(x.start_date) %>&ndash;<%= x.end_date != null ? parseYearMonth(x.end_date) : "Present" %></p>
+                <p><%= parseYearMonth(x.start_date).toLocaleDateString("en-US", { year: "numeric", month: "long" }) %>&ndash;<%= x.end_date != null ? parseYearMonth(x.end_date).toLocaleDateString("en-US", { year: "numeric", month: "long" }) : "Present" %></p>
                 <p><%= x.location %></p>
               </div>
               <p><b><%= x.grades.name %>:</b> <%= x.grades.value %></p>
@@ -135,7 +137,7 @@
                 <p><a href="<%= x.institution.site %>"><%= x.institution.name %></a></p>
               </div>
               <div class="c-cv-item-subtitle">
-                <p><%= parseYearMonth(x.date) %></p>
+                <p><%= parseYearMonth(x.date).toLocaleDateString("en-US", { year: "numeric", month: "long" }) %></p>
               </div>
               <div class="cv-ed">
                 <div class="cv-ed-toggle">
@@ -161,7 +163,7 @@
                 <p><a href="<%= x.institution.site %>"><%= x.institution.name %></a></p>
               </div>
               <div class="c-cv-item-subtitle">
-                <p><%= parseYearMonth(x.date) %></p>
+                <p><%= parseYearMonth(x.date).toLocaleDateString("en-US", { year: "numeric", month: "long" }) %></p>
               </div>
               <div class="cv-ed">
                 <div class="cv-ed-toggle">
@@ -187,7 +189,7 @@
                 <p><a href="<%= x.institution.site %>"><%= x.institution.name %></a></p>
               </div>
               <div class="c-cv-item-subtitle">
-                <p><%= parseYearMonth(x.date) %></p>
+                <p><%= parseYearMonth(x.date).toLocaleDateString("en-US", { year: "numeric", month: "long" }) %></p>
               </div>
               <p><%- x.description %></p>
               <a class="c-button-link c-button" href="<%= x.certification_link %>">

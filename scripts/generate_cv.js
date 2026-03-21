@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import ejs from "ejs";
 import { navbar, footer } from "./components.js";
-import { minifyHTML, parseYearMonth } from "./utils.js";
+import { minifyHTML, parseYearMonth, getTimeDifference, formatTimeDifference } from "./utils.js";
 
 export async function generateCV(templateFilePath, metadataFilePath, outputDirPath, outputFileName) {
   const templateFile = path.resolve(templateFilePath);
@@ -24,6 +24,8 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
     footer: footer,
     data: metadata,
     parseYearMonth: parseYearMonth,
+    getTimeDifference: getTimeDifference,
+    formatTimeDifference: formatTimeDifference,
   }
 
   const html = ejs.render(template, data);
