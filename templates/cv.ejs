@@ -40,7 +40,11 @@
             <div class="c-card">
               <div class="c-cv-item-title">
                 <h3 class="c-card-title-3"><%= x.position %></h3>
-                <p><a href="<%= x.company.site %>"><%= x.company.name %></a>&ensp;&middot;&ensp;<%= x.type %></p>
+                <% if (x.company.site != null) { %>
+                  <p><a href="<%= x.company.site %>"><%= x.company.name %></a>&ensp;&middot;&ensp;<%= x.type %></p>
+                <% } else { %>
+                  <p><%= x.company.name %>&ensp;&middot;&ensp;<%= x.type %></p>
+                <% } %>
               </div>
               <div class="c-cv-item-subtitle">
                 <p>
