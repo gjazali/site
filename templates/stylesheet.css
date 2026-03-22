@@ -482,6 +482,7 @@ footer {
   flex-wrap: wrap;
   gap: var(--spacing-small);
   font-size: 11;
+  width: 100%;
 }
 
 .c-card .c-content-tags {
@@ -808,7 +809,6 @@ body:has(.c-navbar) {
 
 .c-post-metadata-category {
   font-size: 14;
-  font-style: italic;
 }
 
 .c-text-image {
