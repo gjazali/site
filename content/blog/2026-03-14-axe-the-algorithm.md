@@ -1,4 +1,4 @@
-# Axe the Algorithm
+# Axe the Algorithm!
 
 When I say "the algorithm," I'm talking about that voodoo magic social media platforms alike do to keep you hooked to their services. I.e., how they get you to keep doom-scrolling. I don't need to write a whole preface to why that's a bad thing. So it's obvious that we should avoid pages of this nature. But it's also obvious that it's hard to do so&mdash;otherwise, everyone would've done it already; and the term "the algorithm" wouldn't have been _that_ dominating in the ever-popular narrative of social media addiction.
 
