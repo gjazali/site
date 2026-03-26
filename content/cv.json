@@ -351,6 +351,16 @@
   "honors_and_awards": [
     {
       "id": "0",
+      "name": "Swift Student Challenge 2026 Distinguished Winner",
+      "institution": {
+        "name": "Apple",
+        "site": "https://apple.com/"
+      },
+      "date": "2026-03",
+      "description": "<p>I am one of 50 people worldwide to win the Distinguished Winner title in the 2026 Swift Student Challenge.</p><p>\"The Challenge has given thousands of student developers the opportunity to showcase their creativity and coding capabilities through app playgrounds, and learn real-world skills that they can take into their careers and beyond.</p><p>\"Swift Student Challenge winners [are] selected based on submissions that demonstrate excellence in innovation, creativity, social impact, or inclusivity. From this esteemed group, we’ll name Distinguished Winners whose submissions are truly exceptional and invite them to join us at Apple in Cupertino for three incredible days.\"</p>&#x2015;<a href='https://developer.apple.com/swift-student-challenge/'>developer.apple.com</a>"
+    },
+    {
+      "id": "1",
       "name": "IISMA 2023 Fully-Funded Scholarship to study at the University of Pennsylvania, USA",
       "institution": {
         "name": "Indonesian International Student Mobility Awards (IISMA), Indonesian Ministry of Education, Culture, Research, and Technology",
@@ -360,7 +370,7 @@
       "description": "This is a fully-funded scholarship to study at the University of Pennsylvania for one semester from the Indonesian Government's Indonesian International Student Mobility Awards (IISMA) program."
     },
     {
-      "id": "1",
+      "id": "2",
       "name": "Indonesian National Science Olympiad (OSN) Biology at the Provincial Stage of the Special Region of Yogyakarta",
       "institution": {
         "name": "Pusat Prestasi Nasional (Puspresnas), Indonesian Ministry of Education, Culture, Research, and Technology",
