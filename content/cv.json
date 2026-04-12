@@ -1,5 +1,5 @@
 {
-  "about": "<p>I am a developer with a broad skill set, with experience leading small teams. I enjoy working across different layers of the stack, from low-level systems to user-facing applications, tackling complex problems. I also take pleasure in code optimization.</p><p>I am an alumni of the University of Pennsylvania's 2023 International Guest Student Program (Philadelphia, USA). I was also enrolled in an Apple Developer Academy for the 2025 cohort (Surabaya, Indonesia).</p><p>Outside of work, I am a tech hobbyist, running my own mail server and other self-hosted services for personal use; as well as learning new programming languages and software development tools in my spare time.</p>",
+  "about": "<p>I am a developer with a broad skill set and experience leading small teams. I specialize in iOS and web-based app development (full-stack), from designing APIs to deploying data-intensive applications.</p><p>I am an alumni of the University of Pennsylvania's International Guest Student Program (Philadelphia, PA, USA) and the Apple Developer Academy, and I am currently a part of the Apple Developer Institute for AIML.</p><p>I also won the 2026 Swift Student Challenge competition from Apple and was named as one of the 50 Distinguished Winners worldwide, for which I was invited to attend Apple's WWDC26 event in Cupertino, CA, USA.</p><p>Outside of work, I am a tech hobbyist, running my own mail server and other self-hosted services for personal use.</p>",
   "experience": [
     {
       "id": "0",
@@ -226,21 +226,17 @@
       "list": [
         "iOS Development",
         "Web Development",
-        "Game Development",
+        "Unity Development",
         "Java Development",
-        "Object-Oriented Programming",
-        "Functional Programming",
         "Computer Vision & Computational Photography",
-        "Network Security",
-        "Cryptography",
-        "Computer Network Infrastructures",
+        "Computer Networks",
         "Linux Server Administration",
         "Applied Mathematics"
       ]
     },
     {
       "id": "1",
-      "name": "Programming Languages",
+      "name": "Programming & Markup Languages",
       "list": [
         "Python",
         "R",
@@ -256,21 +252,14 @@
         "Bash (and other Shell-derived scripting languages)",
         "SQL",
         "NASM Assembly",
-        "MATLAB"
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Markup Languages",
-      "list": [
+        "MATLAB",
         "HTML",
-        "XML",
         "LaTeX",
         "Markdown"
       ]
     },
     {
-      "id": "3",
+      "id": "2",
       "name": "Web Technologies & Infrastructures",
       "list": [
         "Laravel",
@@ -283,27 +272,22 @@
       ]
     },
     {
-      "id": "4",
+      "id": "3",
       "name": "Database & Storage Systems",
       "list": [
         "Redis",
-        "AWS DynamoDB (NoSQL)",
-        "MySQL",
-        "MariaDB",
-        "SQLite",
-        "Oracle Database",
-        "Cloudflare D1 (SQLite)",
-        "Cloudflare R2 (AWS S3&ndash;compatible object storage)"
+        "NoSQL (e.g., AWS DynamoDB)",
+        "SQL (e.g., MySQL, MariaDB, Cloudflare D1)",
+        "Cloudflare R2 (AWS S3-compatible object storage)"
       ]
     },
     {
-      "id": "5",
+      "id": "4",
       "name": "Data Science & Machine Learning",
       "list": [
         "TensorFlow",
         "PyTorch",
         "OpenCV",
-        "MATLAB Computer Vision Toolbox",
         "Pandas",
         "NumPy",
         "SciPy",
@@ -311,37 +295,17 @@
       ]
     },
     {
-      "id": "6",
-      "name": "Mail Server Software & Tools",
-      "list": [
-        "Postfix",
-        "Dovecot",
-        "Spamassassin",
-        "ClamAV"
-      ]
-    },
-    {
-      "id": "7",
+      "id": "5",
       "name": "DevOps & Version Control",
       "list": [
         "Git",
         "Docker",
         "HashiCorp Vagrant",
-        "Kubernetes",
-        "Apple TestFlight"
+        "Kubernetes"
       ]
     },
     {
-      "id": "8",
-      "name": "Mathematical & Statistical Tools",
-      "list": [
-        "Matplotlib",
-        "Wolfram Mathematica",
-        "MATLAB Statistics and Machine Learning Toolbox"
-      ]
-    },
-    {
-      "id": "9",
+      "id": "6",
       "name": "Debugging Tools",
       "list": [
         "gdb"
@@ -385,6 +349,16 @@
       "id": "0",
       "position": "Student Volunteer",
       "institution": {
+        "name": "Penn Language Center",
+        "site": "https://plc.sas.upenn.edu/"
+      },
+      "date": "2023-09",
+      "description": "I volunteered as a native speaker in a conversation session with Penn students taking Intermediate Indonesian I at the Penn Language Center."
+    },
+    {
+      "id": "1",
+      "position": "Student Volunteer",
+      "institution": {
         "name": "Bethesda Project",
         "site": "https://www.bethesdaproject.org/"
       },
@@ -392,7 +366,7 @@
       "description": "I led two volunteering groups in two Bethesda Project–run homeless shelters in Philadelphia, PA, United States of America."
     },
     {
-      "id": "1",
+      "id": "2",
       "position": "Student Tutor",
       "institution": {
         "name": "The Australian Consortium for 'In-Country' Indonesian Studies",
@@ -400,26 +374,6 @@
       },
       "date": "2022-11",
       "description": "I volunteered as a student tutor for Monash University students in learning Bahasa Indonesia through Lembaga Bahasa Sanata Dharma University's ILCIC (Indonesian Language and Culture Intensive Course) in collaboration with Monash University's Global Immersion Guarantee (GIG) program and ACICIS (Australian Consortium for `In-Country' Indonesian Studies)."
-    },
-    {
-      "id": "2",
-      "position": "Student Tutor",
-      "institution": {
-        "name": "Society for Informatics Students, Universitas Sanata Dharma",
-        "site": "https://www.usd.ac.id/"
-      },
-      "date": "2022-09",
-      "description": "In the Universitas Sanata Dharma Informatics major's Informatika Belajar program, I tutored newly-admitted students in familiarizing themselves with the basics of programming."
-    },
-    {
-      "id": "3",
-      "position": "Student Volunteer",
-      "institution": {
-        "name": "Sekolah Luar Biasa/A Yaketunis",
-        "site": null
-      },
-      "date": "2018-10",
-      "description": "I volunteered in a special school in Yogyakarta, where I helped with the day-to-day activities of blind students."
     }
   ],
   "licenses_and_certifications": [

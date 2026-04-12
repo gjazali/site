@@ -19,8 +19,8 @@
           <li><a href="#about">About Me</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#honors-and-awards">Honors & Awards</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#volunteer-experience">Volunteer Experience</a></li>
           <li><a href="#licenses-and-certifications">Licenses & Certifications</a></li>
           <li><a href="#languages">Languages</a></li>
@@ -59,7 +59,9 @@
                   <label for="cv-ed-dropdown-toggle-experience-<%= x.id %>" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
                 </div>
                 <div class="cv-ed-container">
-                  <p><%- x.description %></p>
+                  <% if (x.description != null) { %>
+                    <%- wrapIntoParagraph(x.description) %>
+                  <% } %>
                   <% if (x.responsibilities.length > 0) { %>
                     <div class="c-card-list-container">
                       <b>Responsibilities:</b>
@@ -111,22 +113,11 @@
                   <label for="cv-ed-dropdown-toggle-education-<%= x.id %>" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
                 </div>
                 <div class="cv-ed-container">
-                  <p><%- x.description %></p>
+                  <% if (x.description != null) { %>
+                    <%- wrapIntoParagraph(x.description) %>
+                  <% } %>
                 </div>
               </div>
-            </div>
-          <% }); %>
-        </div>
-      </div>
-      <div class="c-content-box" id="skills">
-        <h2>Skills</h2>
-        <div>
-          <% data.skills.forEach(function(x) { %>
-            <div class="c-card">
-              <div class="c-cv-item-title">
-                <h3 class="c-card-title-3"><%= x.name %></h3>
-              </div>
-              <p><%= x.list.join(", ") %></p>
             </div>
           <% }); %>
         </div>
@@ -150,9 +141,24 @@
                   <label for="cv-ed-dropdown-toggle-honors-and-awards-<%= x.id %>" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
                 </div>
                 <div class="cv-ed-container">
-                  <p><%- x.description %></p>
+                  <% if (x.description != null) { %>
+                    <%- wrapIntoParagraph(x.description) %>
+                  <% } %>
                 </div>
               </div>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="c-content-box" id="skills">
+        <h2>Skills</h2>
+        <div>
+          <% data.skills.forEach(function(x) { %>
+            <div class="c-card">
+              <div class="c-cv-item-title">
+                <h3 class="c-card-title-3"><%= x.name %></h3>
+              </div>
+              <p><%= x.list.join(", ") %></p>
             </div>
           <% }); %>
         </div>
@@ -176,7 +182,9 @@
                   <label for="cv-ed-dropdown-toggle-volunteer-experience-<%= x.id %>" class="cv-ed-toggle-hide-icon" aria-label="Hide details"><p>&#9660;&ensp;Hide Details</p></label>
                 </div>
                 <div class="cv-ed-container">
-                  <p><%- x.description %></p>
+                  <% if (x.description != null) { %>
+                    <%- wrapIntoParagraph(x.description) %>
+                  <% } %>
                 </div>
               </div>
             </div>
@@ -195,7 +203,9 @@
               <div class="c-cv-item-subtitle">
                 <p><%= parseYearMonth(x.date).toLocaleDateString("en-US", { year: "numeric", month: "long" }) %></p>
               </div>
-              <p><%- x.description %></p>
+              <% if (x.description != null) { %>
+                <%- wrapIntoParagraph(x.description) %>
+              <% } %>
               <a class="c-button-link c-button" href="<%= x.certification_link %>">
                 <div class="c-button-icon-aligner">
                   View Certificate

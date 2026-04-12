@@ -145,6 +145,16 @@ export function parseMetadataDir(metadataDirPath) {
   return metadataList;
 }
 
+export function wrapIntoParagraph(str) {
+  const hasParagraph = /<p\b[^>]*>/i.test(str);
+
+  if (hasParagraph) {
+    return str;
+  }
+
+  return `<p>${str}</p>`;
+}
+
 export function metadataDescendingSorter(a, b) {
   if (Number(a.id) < Number(b.id))
     return 1; // `b` comes before `a`
