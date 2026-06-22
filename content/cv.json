@@ -434,7 +434,6 @@
       "position": "Professor/Lecturer",
       "relationship": "Undergraduate Thesis Advisor",
       "location": "Yogyakarta, Indonesia",
-      "phone_number": "references_phone_number_suparwito",
       "email_address": "references_email_suparwito"
     },
     {
@@ -447,7 +446,6 @@
       "position": "Head of Division",
       "relationship": "Supervisor",
       "location": "Yogyakarta, Indonesia",
-      "phone_number": "references_phone_number_kumboro",
       "email_address": "references_email_kumboro"
     },
     {
@@ -460,7 +458,6 @@
       "position": "Professor/Lecturer & Former University President (Rector)",
       "relationship": "Academic Advisor",
       "location": "Yogyakarta, Indonesia",
-      "phone_number": "references_phone_number_priyatma",
       "email_address": "references_email_priyatma"
     }
   ]
