@@ -13,9 +13,11 @@ export const config = JSON.parse(
 
 export function resolvePageTitle(page) {
   if (page.title_page_name != null) {
-    return config.site.page_title_format
-      .replace("{site_name}", config.site.name)
-      .replace("{page_name}", page.title_page_name);
+    const { page_title_prefix, page_title_suffix } = config.site;
+
+    return [page_title_prefix, page.title_page_name, page_title_suffix]
+      .filter((part) => part != null)
+      .join(" ");
   }
 
   return page.title != null ? page.title : config.site.name;
