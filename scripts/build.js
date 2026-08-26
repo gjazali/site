@@ -1,3 +1,4 @@
+import { cleanOutputDir } from "./clean_output.js";
 import { copyAssets } from "./copy_assets.js";
 import { generateCSS } from "./generate_css.js";
 import { generateGenericPage } from "./generate_generic_page.js";
@@ -5,6 +6,9 @@ import { generateCV } from "./generate_cv.js";
 import { generatePosts } from "./generate_posts.js";
 import { generatePostList } from "./generate_post_list.js";
 import { generateRSS } from "./generate_rss.js";
+
+console.log(`Cleaning output directory...`);
+cleanOutputDir("public");
 
 console.log(`Copying assets...`);
 copyAssets("assets", "public/assets");
