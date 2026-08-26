@@ -798,14 +798,12 @@ body:has(.c-navbar) {
   flex-direction: row;
   align-items: center;
   gap: var(--spacing-medium);
+  font-size: 14px;
+  min-height: 1lh;
 }
 
 .about-me-details-individual-container img {
   width: auto;
-}
-
-.about-me-details-individual-container p {
-  font-size: 14px;
 }
 
 .about-me-details-individual-container svg {
