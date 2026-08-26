@@ -843,7 +843,7 @@ body:has(.c-navbar) {
   margin-bottom: 0;
 }
 
-#contact-information-footer {
+.contact-information-footer {
   margin-top: var(--spacing-huge);
 }
 
