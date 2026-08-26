@@ -1,18 +1,18 @@
 <html>
   <head>
-    <title>G.A. Jazali's Blog</title>
+    <title><%= title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="<%= stylesheetHref %>">
   </head>
 
   <body>
     <%- navbar %>
     <div class="c-content-area">
-      <h1>Blog</h1>
+      <h1><%= heading %></h1>
       <div class="c-post-list">
         <div class="c-post-list-details">
           <p>If you're using an RSS feed reader, subscribe to this blog's RSS feed by using the URL below.</p>
-          <a class="c-button c-e-button-main c-button-link" href="/blog/index.xml">RSS Feed</a>
+          <a class="c-button c-e-button-main c-button-link" href="<%= feedHref %>">RSS Feed</a>
         </div>
         <div>
           <% metadataList.forEach(function(x) { %>

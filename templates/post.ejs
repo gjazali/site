@@ -2,7 +2,7 @@
   <head>
     <title><%- data.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="<%= stylesheetHref %>">
   </head>
 
   <body>
@@ -10,7 +10,7 @@
     <div class="c-content-area">
       <div class="c-post-navigation-container">
         <div class="c-post-navigation-primary-container">
-          <p><a href="/<%= postListPath %>"><%= postListPath.charAt(0).toUpperCase() + postListPath.slice(1) %></a>&ensp;/&ensp;<%= data.title %></p>
+          <p><a href="/<%= postListPath %>"><%= heading %></a>&ensp;/&ensp;<%= data.title %></p>
         </div>
         <div class="c-post-navigation-secondary-container">
         </div>

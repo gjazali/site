@@ -1,26 +1,32 @@
 import fs from "fs";
 import path from "path";
 import ejs from "ejs";
-import { parseTimestamp, minifyHTML } from "./utils.js";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
 import markdownItMathTemml from "markdown-it-math/temml";
-import { navbar, footer } from "./components.js";
+import {
+  config,
+  resolveTemplatePath,
+  resolveContentPath,
+  resolveOutputPath
+} from "./config.js";
+import { buildPageData } from "./page_data.js";
+import { parseTimestamp, minifyHTML } from "./utils.js";
 
-export async function generatePosts(inputDirPath, outputDirPath, templateFilePath, postListName, postListPath) {
+export async function generatePosts(section) {
   const md = new MarkdownIt(
     {
-      html: true,
-      linkify: true,
-      typographer: true
+      html: config.markdown.html,
+      linkify: config.markdown.linkify,
+      typographer: config.markdown.typographer
     }
   )
     .use(MarkdownItFootnote)
     .use(markdownItMathTemml);
 
-  const inputDir = path.resolve(inputDirPath);
-  const outputDir = path.resolve(outputDirPath);
-  const templateFile = path.resolve(templateFilePath);
+  const inputDir = path.resolve(resolveContentPath(section.route));
+  const outputDir = path.resolve(resolveOutputPath(section.route));
+  const templateFile = path.resolve(resolveTemplatePath(section.post_template));
 
   if (!fs.existsSync(inputDir)) {
     console.log("Input directory doesn't exist, skipping generation");
@@ -63,14 +69,15 @@ export async function generatePosts(inputDirPath, outputDirPath, templateFilePat
     );
     const metadata = JSON.parse(metadataFile);
 
-    const data = {
-      navbar: navbar,
-      footer: footer,
-      data: metadata,
-      postListPath: postListPath,
-      parseTimestamp: parseTimestamp,
-      content: rendered,
-    }
+    const data = buildPageData(
+      { title: metadata.title, heading: section.heading },
+      {
+        data: metadata,
+        postListPath: section.route,
+        parseTimestamp: parseTimestamp,
+        content: rendered
+      }
+    );
 
     const html = compiled(data)
 

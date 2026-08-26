@@ -1,0 +1,138 @@
+{
+  "site": {
+    "name": "G.A. Jazali",
+    "base_url": "https://jazali.org",
+    "copyright_year": "2026",
+    "page_title_format": "{site_name}'s {page_name}",
+    "static_assets_base_url": "https://static.jazali.net",
+    "source_code_url": "https://github.com/gjazali/site",
+    "license_name": "MIT License",
+    "license_url": "https://github.com/gjazali/site/blob/main/LICENSE",
+    "profiles": {
+      "github": {
+        "url": "https://github.com/gjazali",
+        "label": "@gjazali"
+      },
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/jazali/",
+        "label": "in/jazali"
+      },
+      "instagram": {
+        "url": "https://www.instagram.com/ghazaliahlamj/",
+        "label": "@ghazaliahlamj"
+      },
+      "goodreads": {
+        "url": "https://goodreads.com/jazali/",
+        "label": "goodreads.com/jazali"
+      }
+    }
+  },
+  "directories": {
+    "content": "content",
+    "templates": "templates",
+    "assets": "assets",
+    "output": "public",
+    "output_assets": "assets"
+  },
+  "stylesheet": {
+    "template": "stylesheet.ejs",
+    "output_name": "stylesheet"
+  },
+  "pages": [
+    {
+      "name": "404 error page",
+      "template": "404.ejs",
+      "output_directory": "",
+      "output_name": "404",
+      "title": "Page Not Found"
+    },
+    {
+      "name": "main page",
+      "template": "main_page.ejs",
+      "output_directory": "",
+      "output_name": "index",
+      "title": null
+    },
+    {
+      "name": "contact page",
+      "template": "contact_page.ejs",
+      "output_directory": "contact",
+      "output_name": "index",
+      "title": "Contact Me",
+      "heading": "Contact Me"
+    }
+  ],
+  "cv": {
+    "name": "CV page",
+    "template": "cv.ejs",
+    "metadata": "cv.json",
+    "output_directory": "cv",
+    "output_name": "index",
+    "title_page_name": "CV",
+    "heading": "Curriculum Vitae (CV)"
+  },
+  "sections": [
+    {
+      "route": "blog",
+      "heading": "Blog",
+      "post_template": "post.ejs",
+      "list_template": "blog_post_list.ejs",
+      "list_output_name": "index",
+      "feed": {
+        "template": "rss.ejs",
+        "output_name": "index.xml",
+        "description": "Posts about whatever I'm interested in."
+      }
+    },
+    {
+      "route": "portfolio",
+      "heading": "Portfolio",
+      "post_template": "post.ejs",
+      "list_template": "portfolio_post_list.ejs",
+      "list_output_name": "index",
+      "feed": null
+    }
+  ],
+  "navigation": [
+    { "label": "Home", "href": "/", "external": false },
+    { "label": "Blog", "href": "/blog", "external": false },
+    { "label": "CV", "href": "/cv", "external": false },
+    { "label": "Portfolio", "href": "/portfolio", "external": false },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/gjazali",
+      "external": true
+    },
+    { "label": "Contact", "href": "/contact", "external": false }
+  ],
+  "markdown": {
+    "html": true,
+    "linkify": true,
+    "typographer": true
+  },
+  "html_minifier": {
+    "collapse_whitespace": true,
+    "remove_comments": true,
+    "minify_css": true,
+    "minify_js": true
+  },
+  "formatting": {
+    "timestamp_locale": "en-GB",
+    "list_locale": "en",
+    "list_style": "long",
+    "list_type": "conjunction",
+    "timestamp": {
+      "day": "numeric",
+      "month": "long",
+      "year": "numeric",
+      "hour": "2-digit",
+      "minute": "2-digit",
+      "time_zone_name": "short"
+    }
+  },
+  "dev_server": {
+    "port": null,
+    "cache_seconds": -1,
+    "default_extension": "html"
+  }
+}

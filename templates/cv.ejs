@@ -1,18 +1,18 @@
 <html>
   <head>
-    <title>G.A. Jazali's CV</title>
+    <title><%= title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="<%= stylesheetHref %>">
   </head>
 
   <body>
     <%- navbar %>
     <div class="c-content-area">
-      <h1>Curriculum Vitae (CV)</h1>
+      <h1><%= heading %></h1>
       <div id="cv-details">
-        <p>You can also download the more concise version of my CV as a PDF document. This page contains most of the information listed on my <a href="https://www.linkedin.com/in/jazali/">LinkedIn page</a>. To see my projects, visit my <a href="/portfolio">portfolio page</a>.</p>
+        <p>You can also download the more concise version of my CV as a PDF document. This page contains most of the information listed on my <a href="<%= config.site.profiles.linkedin.url %>">LinkedIn page</a>. To see my projects, visit my <a href="/portfolio">portfolio page</a>.</p>
         <div id="cv-button-container">
-          <a class="c-button-link c-button c-e-button-main" href="https://static.jazali.net/documents/cv.pdf">
+          <a class="c-button-link c-button c-e-button-main" href="<%= config.site.static_assets_base_url %>/documents/cv.pdf">
             <div class="c-button-icon-aligner">
               Detailed PDF
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
@@ -21,7 +21,7 @@
               </svg>
             </div>
           </a>
-          <a class="c-button-link c-button" href="https://static.jazali.net/documents/cv_one_page.pdf">
+          <a class="c-button-link c-button" href="<%= config.site.static_assets_base_url %>/documents/cv_one_page.pdf">
             <div class="c-button-icon-aligner">
               One-Page PDF
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
@@ -269,8 +269,8 @@
                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
                   </svg>
                   <picture>
-                    <source srcset="../assets/texts/<%= x.email_address.concat('_dark') %>.svg" media="(prefers-color-scheme: dark)">
-                    <source srcset="../assets/texts/<%= x.email_address.concat('_light') %>.svg" media="(prefers-color-scheme: light)">
+                    <source srcset="<%= assetsHref %>/texts/<%= x.email_address.concat('_dark') %>.svg" media="(prefers-color-scheme: dark)">
+                    <source srcset="<%= assetsHref %>/texts/<%= x.email_address.concat('_light') %>.svg" media="(prefers-color-scheme: light)">
                     <img class="c-text-image" alt="Main email" loading="lazy"/>
                   </picture>
                 </div>

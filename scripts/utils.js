@@ -1,17 +1,19 @@
 import fs from "fs";
 import path from "path";
 import { minify } from "html-minifier-terser";
+import { config } from "./config.js";
 
 export function parseTimestamp(input) {
   const date = new Date(input);
+  const { timestamp_locale, timestamp } = config.formatting;
 
-  const result = new Intl.DateTimeFormat('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    timeZoneName: 'short'
+  const result = new Intl.DateTimeFormat(timestamp_locale, {
+    day: timestamp.day,
+    month: timestamp.month,
+    year: timestamp.year,
+    hour: timestamp.hour,
+    minute: timestamp.minute,
+    timeZoneName: timestamp.time_zone_name
   }).format(date);
 
   return result;
@@ -102,7 +104,12 @@ export function formatTimeDifference(timeDifferenceObject) {
     return "0 time elapsed";
   }
 
-  const formatter = new Intl.ListFormat("en", { style: "long", type: "conjunction" });
+  const { list_locale, list_style, list_type } = config.formatting;
+
+  const formatter = new Intl.ListFormat(list_locale, {
+    style: list_style,
+    type: list_type
+  });
 
   return formatter.format(parts);
 }
@@ -165,11 +172,13 @@ export function metadataDescendingSorter(a, b) {
 }
 
 export async function minifyHTML(inputFile) {
+  const options = config.html_minifier;
+
   const outputFile = await minify(inputFile, {
-    collapseWhitespace: true,
-    removeComments: true,
-    minifyCSS: true,
-    minifyJS: true
+    collapseWhitespace: options.collapse_whitespace,
+    removeComments: options.remove_comments,
+    minifyCSS: options.minify_css,
+    minifyJS: options.minify_js
   });
 
   return outputFile;

@@ -1,13 +1,24 @@
 import fs from "fs";
 import path from "path";
 import ejs from "ejs";
-import { navbar, footer } from "./components.js";
-import { minifyHTML, parseYearMonth, getTimeDifference, formatTimeDifference, wrapIntoParagraph } from "./utils.js";
+import {
+  resolveTemplatePath,
+  resolveContentPath,
+  resolveOutputPath
+} from "./config.js";
+import { buildPageData } from "./page_data.js";
+import {
+  minifyHTML,
+  parseYearMonth,
+  getTimeDifference,
+  formatTimeDifference,
+  wrapIntoParagraph
+} from "./utils.js";
 
-export async function generateCV(templateFilePath, metadataFilePath, outputDirPath, outputFileName) {
-  const templateFile = path.resolve(templateFilePath);
-  const metadataFile = path.resolve(metadataFilePath);
-  const outputDir = path.resolve(outputDirPath);
+export async function generateCV(page) {
+  const templateFile = path.resolve(resolveTemplatePath(page.template));
+  const metadataFile = path.resolve(resolveContentPath(page.metadata));
+  const outputDir = path.resolve(resolveOutputPath(page.output_directory));
 
   if (!fs.existsSync(templateFile)) {
     console.log("Input file doesn't exist, skipping generation");
@@ -19,21 +30,19 @@ export async function generateCV(templateFilePath, metadataFilePath, outputDirPa
 
   fs.mkdirSync(outputDir, { recursive: true });
 
-  const data = {
-    navbar: navbar,
-    footer: footer,
+  const data = buildPageData(page, {
     data: metadata,
     parseYearMonth: parseYearMonth,
     getTimeDifference: getTimeDifference,
     formatTimeDifference: formatTimeDifference,
-    wrapIntoParagraph: wrapIntoParagraph,
-  }
+    wrapIntoParagraph: wrapIntoParagraph
+  });
 
   const html = ejs.render(template, data);
 
   const outputFilePath = path.join(
     outputDir,
-    `${outputFileName}.html`
+    `${page.output_name}.html`
   );
 
   const minifiedHTML = await minifyHTML(html);

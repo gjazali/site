@@ -1,5 +1,7 @@
 import fs from "fs";
 import path from "path";
+import ejs from "ejs";
+import { resolveAssetsHref } from "./config.js";
 import { minifyCSS } from "./utils.js";
 
 export function generateCSS(templateFilePath, outputDirPath, outputFileName) {
@@ -11,7 +13,11 @@ export function generateCSS(templateFilePath, outputDirPath, outputFileName) {
     return;
   }
 
-  const css = fs.readFileSync(templateFile, "utf8");
+  const css = ejs.render(
+    fs.readFileSync(templateFile, "utf8"),
+    { assetsHref: resolveAssetsHref() },
+    { filename: templateFile }
+  );
 
   fs.mkdirSync(outputDir, { recursive: true });
 

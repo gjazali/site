@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-  <title>G.A. Jazali's Blog</title>
-  <link>https://jazali.org</link>
-  <description>Posts about whatever I'm interested in.</description>
+  <title><%= feedTitle %></title>
+  <link><%= config.site.base_url %></link>
+  <description><%= feedDescription %></description>
     <% items.forEach(function(x) { %>
       <item>
         <title><%= x.title %></title>
-        <link><%= `https://${feedSourceDomain}/${feedSourceDir}/${x.path}.html` %></link>
+        <link><%= `${feedBaseUrl}/${x.path}.html` %></link>
         <% if (x.description != null) { %>
           <description><%= x.description %></description>
         <% } %>

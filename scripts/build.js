@@ -1,3 +1,5 @@
+import path from "path";
+import { config, resolveTemplatePath } from "./config.js";
 import { cleanOutputDir } from "./clean_output.js";
 import { copyAssets } from "./copy_assets.js";
 import { generateCSS } from "./generate_css.js";
@@ -7,38 +9,41 @@ import { generatePosts } from "./generate_posts.js";
 import { generatePostList } from "./generate_post_list.js";
 import { generateRSS } from "./generate_rss.js";
 
+const { directories, stylesheet, pages, cv, sections } = config;
+
 console.log(`Cleaning output directory...`);
-cleanOutputDir("public");
+cleanOutputDir(directories.output);
 
 console.log(`Copying assets...`);
-copyAssets("assets", "public/assets");
+copyAssets(
+  directories.assets,
+  path.join(directories.output, directories.output_assets)
+);
 
 console.log(`Generating stylesheet...`);
-generateCSS("templates/stylesheet.css", "public", "stylesheet");
+generateCSS(
+  resolveTemplatePath(stylesheet.template),
+  directories.output,
+  stylesheet.output_name
+);
 
-console.log(`Generating 404 error page...`);
-await generateGenericPage("templates/404.ejs", "public", "404");
+for (const page of pages) {
+  console.log(`Generating ${page.name}...`);
+  await generateGenericPage(page);
+}
 
-console.log(`Generating main page...`);
-await generateGenericPage("templates/main_page.ejs", "public", "index");
+console.log(`Generating ${cv.name}...`);
+await generateCV(cv);
 
-console.log(`Generating CV page...`);
-await generateCV("templates/cv.ejs", "content/cv.json", "public/cv", "index");
+for (const section of sections) {
+  console.log(`Generating ${section.route} posts...`);
+  await generatePosts(section);
 
-console.log(`Generating contact page...`);
-await generateGenericPage("templates/contact_page.ejs", "public/contact", "index");
+  console.log(`Generating ${section.route} post list...`);
+  await generatePostList(section);
 
-console.log(`Generating blog posts...`);
-await generatePosts("content/blog", "public/blog", "templates/post.ejs", "Blog", "blog");
-
-console.log(`Generating blog post list...`);
-await generatePostList("content/blog", "public/blog", "templates/blog_post_list.ejs");
-
-console.log(`Generating RSS feed...`);
-generateRSS("content/blog", "public/blog", "templates/rss.ejs", "index.xml", "jazali.org", "blog");
-
-console.log(`Generating portfolio posts...`);
-await generatePosts("content/portfolio", "public/portfolio", "templates/post.ejs", "Portfolio", "portfolio");
-
-console.log(`Generating portfolio post list...`);
-await generatePostList("content/portfolio", "public/portfolio", "templates/portfolio_post_list.ejs");
+  if (section.feed != null) {
+    console.log(`Generating ${section.route} RSS feed...`);
+    generateRSS(section);
+  }
+}
