@@ -793,7 +793,7 @@ body:has(.c-navbar) {
   flex-direction: column;
 }
 
-.about-me-details-individual-container {
+.icon-list-individual-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -802,11 +802,11 @@ body:has(.c-navbar) {
   min-height: 1lh;
 }
 
-.about-me-details-individual-container img {
+.icon-list-individual-container img {
   width: auto;
 }
 
-.about-me-details-individual-container svg {
+.icon-list-individual-container svg {
   flex-shrink: 0;
 }
 
@@ -833,7 +833,7 @@ body:has(.c-navbar) {
   gap: var(--spacing-large);
 }
 
-.contact-details-container {
+.icon-list-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-small);
